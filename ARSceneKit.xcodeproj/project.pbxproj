@@ -13,6 +13,7 @@
 		8516879B20E2C1CE00F8A8E8 /* mac_fix_material.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8516879A20E2C1CE00F8A8E8 /* mac_fix_material.jpg */; };
 		8516879E20E2C6E200F8A8E8 /* mac_fix.scn in Resources */ = {isa = PBXBuildFile; fileRef = 8516879C20E2C1D800F8A8E8 /* mac_fix.scn */; };
 		8516879F20E2C6E500F8A8E8 /* urban.scn in Resources */ = {isa = PBXBuildFile; fileRef = 8516879D20E2C1E800F8A8E8 /* urban.scn */; };
+		C149B3FF20EAA42F007CF0AC /* Perfume Cube in Resources */ = {isa = PBXBuildFile; fileRef = C149B3FE20EAA42F007CF0AC /* Perfume Cube */; };
 		C17F4B9020EA82B700492C3E /* ProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17F4B8F20EA82B700492C3E /* ProductList.swift */; };
 		C17F4B9220EA82BD00492C3E /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17F4B9120EA82BD00492C3E /* ProductCollectionViewCell.swift */; };
 		E4231FD01F0FEAD500CBE4C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4231FCF1F0FEAD500CBE4C1 /* AppDelegate.swift */; };
@@ -29,6 +30,7 @@
 		8516879A20E2C1CE00F8A8E8 /* mac_fix_material.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mac_fix_material.jpg; sourceTree = "<group>"; };
 		8516879C20E2C1D800F8A8E8 /* mac_fix.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = mac_fix.scn; sourceTree = "<group>"; };
 		8516879D20E2C1E800F8A8E8 /* urban.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = urban.scn; sourceTree = "<group>"; };
+		C149B3FE20EAA42F007CF0AC /* Perfume Cube */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Perfume Cube"; sourceTree = "<group>"; };
 		C17F4B8F20EA82B700492C3E /* ProductList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductList.swift; sourceTree = "<group>"; };
 		C17F4B9120EA82BD00492C3E /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		E4231FCC1F0FEAD500CBE4C1 /* ARSceneKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARSceneKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +56,7 @@
 		8516878D20E2C0E000F8A8E8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C149B3FE20EAA42F007CF0AC /* Perfume Cube */,
 				8516879320E2C17A00F8A8E8 /* URBAN */,
 				8516878E20E2C0F600F8A8E8 /* MAC */,
 			);
@@ -187,6 +190,7 @@
 				8516879120E2C10400F8A8E8 /* mac_palette.scn in Resources */,
 				8516879F20E2C6E500F8A8E8 /* urban.scn in Resources */,
 				8516879B20E2C1CE00F8A8E8 /* mac_fix_material.jpg in Resources */,
+				C149B3FF20EAA42F007CF0AC /* Perfume Cube in Resources */,
 				E4231FD71F0FEAD500CBE4C1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

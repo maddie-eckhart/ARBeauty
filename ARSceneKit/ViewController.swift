@@ -16,7 +16,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
     @IBOutlet var collectionView: UICollectionView!
     
     var nodeModel:SCNNode!
-    let nodeName = "SketchUp"
+    let nodeName = "makeupScene"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,7 +79,6 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
         // Prevent the screen from being dimmed after a while
         UIApplication.shared.isIdleTimerDisabled = true
         
-        // Show debug UI to view performance metrics (e.g. frames per second).
         sceneView.showsStatistics = true
 
     }
@@ -88,13 +87,13 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
     
     
     
-    // Product Collection View
+    //////////////////////////////// Product Collection View
     var products: [ProductList] = []
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         // list of products
         let mac: ProductList = ProductList(newName: "mac", newImage: UIImage(named: "mac_palette_material")!)
-        let spray: ProductList = ProductList(newName: "fountation", newImage: UIImage(named: "mac_fix_material")!)
+        let spray: ProductList = ProductList(newName: "foundation", newImage: UIImage(named: "mac_fix_material")!)
         products.append(mac)
         products.append(spray)
 
@@ -114,6 +113,12 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // cell highlight when selected
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.layer.borderWidth = 2.0
+        cell?.layer.borderColor = UIColor.red.cgColor
+        
+        // drop product
         if products[indexPath.row].name == "mac" {
             if let modelScene = SCNScene(named:"mac_palette.scn") {
                 self.nodeModel =  modelScene.rootNode.childNode(withName: self.nodeName, recursively: true)
@@ -130,7 +135,12 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
                 print("can't load model")
             }
         }
-        viewDidLoad()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        // cell un-highlight when selected
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.layer.borderWidth = 0.0
     }
     
     
@@ -302,7 +312,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
             - is the target membersship button checked?
             - is the folder blue or yellow? if yellow you can use model name only, if blue use absolute path
         
-        */ 
+        
         
         let alert = UIAlertController(title: "Choose Model", message: "Please Select an Option", preferredStyle: .actionSheet)
         
@@ -337,9 +347,9 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
         self.present(alert, animated: true, completion: {
             print("completion block")
         })
+    */
+        
     }
-
-
 }
 
 
