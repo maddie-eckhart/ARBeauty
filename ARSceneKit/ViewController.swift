@@ -329,7 +329,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
                 self.nodeModel =  modelScene.rootNode.childNode(withName: self.nodeName, recursively: true)
             }
             else {
-                print("can't load model")
+                print("cant load model")
             }
         }))
 
