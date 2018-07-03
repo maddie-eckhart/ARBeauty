@@ -20,6 +20,7 @@
 		C149B40C20EAB9B2007CF0AC /* front.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C149B40520EAB9B1007CF0AC /* front.jpeg */; };
 		C149B40D20EAB9B2007CF0AC /* side 1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C149B40620EAB9B1007CF0AC /* side 1.jpeg */; };
 		C149B40E20EAB9B2007CF0AC /* back.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C149B40720EAB9B1007CF0AC /* back.jpeg */; };
+		C149B41020EBCF76007CF0AC /* PlaneDetectionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149B40F20EBCF76007CF0AC /* PlaneDetectionNode.swift */; };
 		C17F4B9020EA82B700492C3E /* ProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17F4B8F20EA82B700492C3E /* ProductList.swift */; };
 		C17F4B9220EA82BD00492C3E /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17F4B9120EA82BD00492C3E /* ProductCollectionViewCell.swift */; };
 		E4231FD01F0FEAD500CBE4C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4231FCF1F0FEAD500CBE4C1 /* AppDelegate.swift */; };
@@ -43,6 +44,7 @@
 		C149B40520EAB9B1007CF0AC /* front.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = front.jpeg; sourceTree = "<group>"; };
 		C149B40620EAB9B1007CF0AC /* side 1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "side 1.jpeg"; sourceTree = "<group>"; };
 		C149B40720EAB9B1007CF0AC /* back.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = back.jpeg; sourceTree = "<group>"; };
+		C149B40F20EBCF76007CF0AC /* PlaneDetectionNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneDetectionNode.swift; sourceTree = "<group>"; };
 		C17F4B8F20EA82B700492C3E /* ProductList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductList.swift; sourceTree = "<group>"; };
 		C17F4B9120EA82BD00492C3E /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		E4231FCC1F0FEAD500CBE4C1 /* ARSceneKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARSceneKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +142,7 @@
 				E4231FCF1F0FEAD500CBE4C1 /* AppDelegate.swift */,
 				C17F4B8F20EA82B700492C3E /* ProductList.swift */,
 				C17F4B9120EA82BD00492C3E /* ProductCollectionViewCell.swift */,
+				C149B40F20EBCF76007CF0AC /* PlaneDetectionNode.swift */,
 				E4231FD31F0FEAD500CBE4C1 /* ViewController.swift */,
 				8516878D20E2C0E000F8A8E8 /* Resources */,
 				85CA642520E284360059B0F1 /* Storyboards */,
@@ -237,6 +240,7 @@
 				C17F4B9020EA82B700492C3E /* ProductList.swift in Sources */,
 				E4231FD41F0FEAD500CBE4C1 /* ViewController.swift in Sources */,
 				C17F4B9220EA82BD00492C3E /* ProductCollectionViewCell.swift in Sources */,
+				C149B41020EBCF76007CF0AC /* PlaneDetectionNode.swift in Sources */,
 				E4231FD01F0FEAD500CBE4C1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,11 +14,47 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
 
     @IBOutlet var sceneView: ARSCNView!
     @IBOutlet var collectionView: UICollectionView!
+    @IBOutlet weak var searchingLabel: UILabel!
     
     var nodeModel:SCNNode!
+    var planeNode: PlaneDetectionNode?
+    private var screenCenter: CGPoint!
     let nodeName = "makeupScene"
+    let session = ARSession()
+    let sessionConfiguration: ARWorldTrackingConfiguration = {
+        let config = ARWorldTrackingConfiguration()
+        config.planeDetection = .horizontal
+        return config
+    }()
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        sceneView.delegate = self
+        sceneView.session = session
+        
+        // Lighting
+        sceneView.automaticallyUpdatesLighting = true
+        sceneView.autoenablesDefaultLighting = true
+        
+        // Update at 60 frames per second (recommended by Apple)
+        sceneView.preferredFramesPerSecond = 60
+        
+        screenCenter = view.center
+        
+        // Get the scene the model is stored in
+        let modelScene = SCNScene(named: "perfume")!
+        
+        // Get the model from the root node of the scene
+        nodeModel = modelScene.rootNode
+        
+        // Scale down the model to fit the real world better
+        nodeModel.scale = SCNVector3(0.001, 0.001, 0.001)
+        
+        // Rotate the model 90 degrees so it sits even to the floor
+        nodeModel.transform = SCNMatrix4Rotate(nodeModel.transform, Float.pi / 2.0, 1.0, 0.0, 0.0)
+        
+        /* ORIGINAL PLANE DETECTION
         super.viewDidLoad()
         
         sceneView.delegate = self
@@ -35,10 +71,20 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
         }else{
             print("can't load model")
         }
- 
+ */
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Make sure that ARKit is supported
+        if ARWorldTrackingConfiguration.isSupported {
+            session.run(sessionConfiguration, options: [.removeExistingAnchors, .resetTracking])
+        } else {
+            print("Sorry, your device doesn't support ARKit")
+        }
+        
+        /* ORIGINAL PLANE DETECTION
         super.viewWillAppear(animated)
         
         // Create a session configuration
@@ -46,9 +92,11 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
         
         // Run the view's session
         sceneView.session.run(configuration)
+ */
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        /* ORIGINAL PLANE DETECTION
         super.viewDidAppear(animated)
         
         guard ARWorldTrackingConfiguration.isSupported else {
@@ -63,8 +111,6 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
             """) // For details, see https://developer.apple.com/documentation/arkit
         }
         
-        
-        // Start the view's AR session with a configuration that uses the rear camera,device position and orientation tracking, and plane detection.
         let configuration = ARWorldTrackingConfiguration()
         if #available(iOS 11.3, *) {
             //configuration.planeDetection = [.horizontal, .vertical]
@@ -81,7 +127,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
         UIApplication.shared.isIdleTimerDisabled = true
         
         sceneView.showsStatistics = true
-
+        */
     }
     
     //////////////////////////////// Product Collection View
@@ -151,6 +197,25 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
 
     // Plane Detection
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
+        
+        guard planeNode == nil else { return }
+        
+        // Create a new focal node
+        let node = PlaneDetectionNode()
+        
+        sceneView.scene.rootNode.addChildNode(node)
+        self.planeNode = node
+        
+        // Hide searching label
+        DispatchQueue.main.async {
+            UIView.animate(withDuration: 0.5, animations: {
+                self.searchingLabel.alpha = 0.0
+            }, completion: { _ in
+                self.searchingLabel.isHidden = true
+            })
+        }
+        
+        /* ORIGINAL PLANE DETECTION
         // Place content only for anchors found by plane detection.
         
         if !anchor.isKind(of: ARPlaneAnchor.self) {
@@ -188,9 +253,24 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
         planeNode.physicsBody = SCNPhysicsBody(type: .static, shape: nil)
         
         node.addChildNode(planeNode)
-        
+        */
     }
     
+    func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
+        // If we haven't established a focal node yet do not update
+        guard let planeNode = planeNode else { return }
+        
+        // Determine if we hit a plane in the scene
+        let hit = sceneView.hitTest(screenCenter, types: .existingPlane)
+        
+        // Find the position of the first plane we hit
+        guard let positionColumn = hit.first?.worldTransform.columns.3 else { return }
+        
+        // Update the position of the node
+        planeNode.position = SCNVector3(x: positionColumn.x, y: positionColumn.y, z: positionColumn.z)
+    }
+    
+    /* ORIGINAL PLANE DETECTION
     // UpdateARContent
     func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
         // Update content only for plane anchors and nodes matching the setup created in `renderer(_:didAdd:for:)`.
@@ -282,7 +362,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
     }
 
     // MARK: - ARSCNViewDelegate
-    
+    */
     
 /*
     // Override to create and configure nodes for anchors added to the view's session.
@@ -293,58 +373,18 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
     }
 */
     
-    
-    @IBAction func chooseModel(sender: AnyObject) {
-        
-        /*
-         
-         If models ever crash or don't load check
-            - is the target membersship button checked?
-            - is the folder blue or yellow? if yellow you can use model name only, if blue use absolute path
-        
-        
-        
-        let alert = UIAlertController(title: "Choose Model", message: "Please Select an Option", preferredStyle: .actionSheet)
-        
-        alert.addAction(UIAlertAction(title: "MAC Palette", style: .default , handler:{ (UIAlertAction)in
-            if let modelScene = SCNScene(named:"mac_palette.scn") {
-                self.nodeModel =  modelScene.rootNode.childNode(withName: self.nodeName, recursively: true)
-            }
-            else {
-                print("can't load model")
-            }
-        }))
-        
-        alert.addAction(UIAlertAction(title: "MAC Fix Spray", style: .default , handler:{ (UIAlertAction)in
-            if let modelScene = SCNScene(named:"mac_fix.scn") {
-                self.nodeModel =  modelScene.rootNode.childNode(withName: self.nodeName, recursively: true)
-            }
-            else {
-                print("can't load model")
-            }
-        }))
-        
-        alert.addAction(UIAlertAction(title: "Urban Palette", style: .default , handler:{ (UIAlertAction)in
-            if let modelScene = SCNScene(named:"urban.scn") {
-                self.nodeModel =  modelScene.rootNode.childNode(withName: self.nodeName, recursively: true)
-            }
-            else {
-                print("cant load model")
-            }
-        }))
-
-        
-        self.present(alert, animated: true, completion: {
-            print("completion block")
-        })
-    */
-    }
-    
         override func viewWillDisappear(_ animated: Bool) {
+            // Pause ARKit while the view is gone
+            session.pause()
+            
+            super.viewWillDisappear(animated)
+            
+            /* ORIGINAL PLANE DETECTION
             super.viewWillDisappear(animated)
     
             // Pause the view's session
             sceneView.session.pause()
+ */
         }
 
         override func didReceiveMemoryWarning() {
