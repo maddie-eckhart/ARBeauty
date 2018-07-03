@@ -16,7 +16,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet weak var searchingLabel: UILabel!
     
-    var nodeModel:SCNNode!
+    private var nodeModel:SCNNode!
     var planeNode: PlaneDetectionNode?
     private var screenCenter: CGPoint!
     let nodeName = "makeupScene"
@@ -43,16 +43,16 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
         screenCenter = view.center
         
         // Get the scene the model is stored in
-        let modelScene = SCNScene(named: "perfume")!
+        let modelScene = SCNScene(named: "mac_fix.scn")!
         
         // Get the model from the root node of the scene
         nodeModel = modelScene.rootNode
         
         // Scale down the model to fit the real world better
-        nodeModel.scale = SCNVector3(0.001, 0.001, 0.001)
+        //nodeModel.scale = SCNVector3(0.001, 0.001, 0.001)
         
         // Rotate the model 90 degrees so it sits even to the floor
-        nodeModel.transform = SCNMatrix4Rotate(nodeModel.transform, Float.pi / 2.0, 1.0, 0.0, 0.0)
+        //nodeModel.transform = SCNMatrix4Rotate(nodeModel.transform, Float.pi / 2.0, 1.0, 0.0, 0.0)
         
         /* ORIGINAL PLANE DETECTION
         super.viewDidLoad()
@@ -161,7 +161,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
         cell?.layer.borderWidth = 2.0
         cell?.layer.borderColor = UIColor.red.cgColor
         
-        // drop product
+        /* drop product
         if products[indexPath.row].name == "mac" {
             if let modelScene = SCNScene(named:"mac_palette.scn") {
                 self.nodeModel =  modelScene.rootNode.childNode(withName: self.nodeName, recursively: true)
@@ -187,6 +187,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
                 print("can't load model")
             }
         }
+ */
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
@@ -202,9 +203,11 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
         
         // Create a new focal node
         let node = PlaneDetectionNode()
+        node.addChildNode(nodeModel)
         
         sceneView.scene.rootNode.addChildNode(node)
         self.planeNode = node
+        
         
         // Hide searching label
         DispatchQueue.main.async {
