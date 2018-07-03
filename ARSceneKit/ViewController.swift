@@ -67,9 +67,10 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
         // Start the view's AR session with a configuration that uses the rear camera,device position and orientation tracking, and plane detection.
         let configuration = ARWorldTrackingConfiguration()
         if #available(iOS 11.3, *) {
-            configuration.planeDetection = [.horizontal, .vertical]
+            //configuration.planeDetection = [.horizontal, .vertical]
+            configuration.planeDetection = [.horizontal]
         } else {
-            // Fallback on earlier versions
+            configuration.planeDetection = [.horizontal]
         }
         sceneView.session.run(configuration)
         
@@ -83,23 +84,19 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
 
     }
     
-    
-    
-    
-    
     //////////////////////////////// Product Collection View
     var products: [ProductList] = []
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         // list of products
         let mac: ProductList = ProductList(newName: "mac", newImage: UIImage(named: "mac_palette_material")!)
-        let spray: ProductList = ProductList(newName: "foundation", newImage: UIImage(named: "mac_fix_material")!)
+        let foundation: ProductList = ProductList(newName: "foundation", newImage: UIImage(named: "mac_fix_material")!)
+        let perfume: ProductList = ProductList(newName: "perfume", newImage: UIImage(named: "front")!)
         products.append(mac)
-        products.append(spray)
-
+        products.append(foundation)
+        products.append(perfume)
         return 1
     }
-    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return products.count
@@ -122,6 +119,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
         if products[indexPath.row].name == "mac" {
             if let modelScene = SCNScene(named:"mac_palette.scn") {
                 self.nodeModel =  modelScene.rootNode.childNode(withName: self.nodeName, recursively: true)
+                print("got product")
             }
             else {
                 print("can't load model")
@@ -135,6 +133,14 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
                 print("can't load model")
             }
         }
+        if products[indexPath.row].name == "perfume" {
+            if let modelScene = SCNScene(named:"perfume.scn") {
+                self.nodeModel =  modelScene.rootNode.childNode(withName: self.nodeName, recursively: true)
+            }
+            else {
+                print("can't load model")
+            }
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
@@ -142,11 +148,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
         let cell = collectionView.cellForItem(at: indexPath)
         cell?.layer.borderWidth = 0.0
     }
-    
-    
-    
-    
-    
+
     // Plane Detection
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         // Place content only for anchors found by plane detection.
@@ -233,18 +235,6 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
  
     func session(_ session: ARSession, didFailWithError error: Error) {
         resetTracking()
-    }
- 
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        // Pause the view's session
-        sceneView.session.pause()
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Release any cached data, images, etc that aren't in use.
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -348,10 +338,19 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
             print("completion block")
         })
     */
-        
     }
+    
+        override func viewWillDisappear(_ animated: Bool) {
+            super.viewWillDisappear(animated)
+    
+            // Pause the view's session
+            sceneView.session.pause()
+        }
+
+        override func didReceiveMemoryWarning() {
+            super.didReceiveMemoryWarning()
+            // Release any cached data, images, etc that aren't in use.
+        }
+
 }
-
-
-
 

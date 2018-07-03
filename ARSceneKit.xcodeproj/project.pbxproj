@@ -13,7 +13,13 @@
 		8516879B20E2C1CE00F8A8E8 /* mac_fix_material.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8516879A20E2C1CE00F8A8E8 /* mac_fix_material.jpg */; };
 		8516879E20E2C6E200F8A8E8 /* mac_fix.scn in Resources */ = {isa = PBXBuildFile; fileRef = 8516879C20E2C1D800F8A8E8 /* mac_fix.scn */; };
 		8516879F20E2C6E500F8A8E8 /* urban.scn in Resources */ = {isa = PBXBuildFile; fileRef = 8516879D20E2C1E800F8A8E8 /* urban.scn */; };
-		C149B3FF20EAA42F007CF0AC /* Perfume Cube in Resources */ = {isa = PBXBuildFile; fileRef = C149B3FE20EAA42F007CF0AC /* Perfume Cube */; };
+		C149B40820EAB9B2007CF0AC /* side 2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C149B40120EAB9B0007CF0AC /* side 2.jpeg */; };
+		C149B40920EAB9B2007CF0AC /* perfume.scn in Resources */ = {isa = PBXBuildFile; fileRef = C149B40220EAB9B0007CF0AC /* perfume.scn */; };
+		C149B40A20EAB9B2007CF0AC /* top.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C149B40320EAB9B1007CF0AC /* top.jpeg */; };
+		C149B40B20EAB9B2007CF0AC /* bottom.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C149B40420EAB9B1007CF0AC /* bottom.jpeg */; };
+		C149B40C20EAB9B2007CF0AC /* front.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C149B40520EAB9B1007CF0AC /* front.jpeg */; };
+		C149B40D20EAB9B2007CF0AC /* side 1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C149B40620EAB9B1007CF0AC /* side 1.jpeg */; };
+		C149B40E20EAB9B2007CF0AC /* back.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C149B40720EAB9B1007CF0AC /* back.jpeg */; };
 		C17F4B9020EA82B700492C3E /* ProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17F4B8F20EA82B700492C3E /* ProductList.swift */; };
 		C17F4B9220EA82BD00492C3E /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17F4B9120EA82BD00492C3E /* ProductCollectionViewCell.swift */; };
 		E4231FD01F0FEAD500CBE4C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4231FCF1F0FEAD500CBE4C1 /* AppDelegate.swift */; };
@@ -30,7 +36,13 @@
 		8516879A20E2C1CE00F8A8E8 /* mac_fix_material.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mac_fix_material.jpg; sourceTree = "<group>"; };
 		8516879C20E2C1D800F8A8E8 /* mac_fix.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = mac_fix.scn; sourceTree = "<group>"; };
 		8516879D20E2C1E800F8A8E8 /* urban.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = urban.scn; sourceTree = "<group>"; };
-		C149B3FE20EAA42F007CF0AC /* Perfume Cube */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Perfume Cube"; sourceTree = "<group>"; };
+		C149B40120EAB9B0007CF0AC /* side 2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "side 2.jpeg"; sourceTree = "<group>"; };
+		C149B40220EAB9B0007CF0AC /* perfume.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = perfume.scn; sourceTree = "<group>"; };
+		C149B40320EAB9B1007CF0AC /* top.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = top.jpeg; sourceTree = "<group>"; };
+		C149B40420EAB9B1007CF0AC /* bottom.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bottom.jpeg; sourceTree = "<group>"; };
+		C149B40520EAB9B1007CF0AC /* front.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = front.jpeg; sourceTree = "<group>"; };
+		C149B40620EAB9B1007CF0AC /* side 1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "side 1.jpeg"; sourceTree = "<group>"; };
+		C149B40720EAB9B1007CF0AC /* back.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = back.jpeg; sourceTree = "<group>"; };
 		C17F4B8F20EA82B700492C3E /* ProductList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductList.swift; sourceTree = "<group>"; };
 		C17F4B9120EA82BD00492C3E /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		E4231FCC1F0FEAD500CBE4C1 /* ARSceneKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARSceneKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,7 +68,7 @@
 		8516878D20E2C0E000F8A8E8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C149B3FE20EAA42F007CF0AC /* Perfume Cube */,
+				C149B40020EAB9A8007CF0AC /* Perfume */,
 				8516879320E2C17A00F8A8E8 /* URBAN */,
 				8516878E20E2C0F600F8A8E8 /* MAC */,
 			);
@@ -90,6 +102,20 @@
 				E4231FDA1F0FEAD500CBE4C1 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		C149B40020EAB9A8007CF0AC /* Perfume */ = {
+			isa = PBXGroup;
+			children = (
+				C149B40720EAB9B1007CF0AC /* back.jpeg */,
+				C149B40420EAB9B1007CF0AC /* bottom.jpeg */,
+				C149B40520EAB9B1007CF0AC /* front.jpeg */,
+				C149B40220EAB9B0007CF0AC /* perfume.scn */,
+				C149B40620EAB9B1007CF0AC /* side 1.jpeg */,
+				C149B40120EAB9B0007CF0AC /* side 2.jpeg */,
+				C149B40320EAB9B1007CF0AC /* top.jpeg */,
+			);
+			path = Perfume;
 			sourceTree = "<group>";
 		};
 		E4231FC31F0FEAD500CBE4C1 = {
@@ -183,15 +209,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4231FDC1F0FEAD500CBE4C1 /* LaunchScreen.storyboard in Resources */,
+				C149B40920EAB9B2007CF0AC /* perfume.scn in Resources */,
+				C149B40A20EAB9B2007CF0AC /* top.jpeg in Resources */,
 				E4231FD91F0FEAD500CBE4C1 /* Assets.xcassets in Resources */,
+				C149B40B20EAB9B2007CF0AC /* bottom.jpeg in Resources */,
+				C149B40D20EAB9B2007CF0AC /* side 1.jpeg in Resources */,
 				8516879720E2C19D00F8A8E8 /* urban_material.jpg in Resources */,
 				8516879220E2C10400F8A8E8 /* mac_palette_material.jpg in Resources */,
 				8516879E20E2C6E200F8A8E8 /* mac_fix.scn in Resources */,
 				8516879120E2C10400F8A8E8 /* mac_palette.scn in Resources */,
+				C149B40820EAB9B2007CF0AC /* side 2.jpeg in Resources */,
 				8516879F20E2C6E500F8A8E8 /* urban.scn in Resources */,
 				8516879B20E2C1CE00F8A8E8 /* mac_fix_material.jpg in Resources */,
-				C149B3FF20EAA42F007CF0AC /* Perfume Cube in Resources */,
 				E4231FD71F0FEAD500CBE4C1 /* Main.storyboard in Resources */,
+				C149B40C20EAB9B2007CF0AC /* front.jpeg in Resources */,
+				C149B40E20EAB9B2007CF0AC /* back.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
