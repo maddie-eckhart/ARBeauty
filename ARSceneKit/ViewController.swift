@@ -22,6 +22,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
     private var selectedNode: SCNNode?
     private var originalRotation: SCNVector3?
     let nodeName = "makeupScene"
+    
     let session = ARSession()
     let sessionConfiguration: ARWorldTrackingConfiguration = {
         let config = ARWorldTrackingConfiguration()
@@ -34,6 +35,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
         
         sceneView.delegate = self
         sceneView.session = session
+        selectedNode?.castsShadow = true
         
         // Lighting
         sceneView.automaticallyUpdatesLighting = true
@@ -66,15 +68,13 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewTapped))
         sceneView.addGestureRecognizer(tapGesture)
         
-        // Tracks pans on the screen
+        // Track pans on the screen
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(viewPanned))
         sceneView.addGestureRecognizer(panGesture)
         
-        // Tracks rotation gestures on the screen
+        // Track rotation gestures on the screen
         let rotationGesture = UIRotationGestureRecognizer(target: self, action: #selector(viewRotated))
         sceneView.addGestureRecognizer(rotationGesture)
-        
-        
         
         
         
@@ -109,7 +109,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
         }
     }
     
-    //////////////////////////////// Product Collection View
+    // Product Collection View
     var products: [ProductList] = []
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -202,7 +202,9 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
         // Add the model to the scene
         sceneView.scene.rootNode.addChildNode(newNode)
         
-        //nodes.append(newNode)
+        // stops the yellow square from moving
+        //planeNode = nil
+        
     }
     
     @objc private func viewPanned(_ gesture: UIPanGestureRecognizer) {
@@ -252,7 +254,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
         let node = PlaneDetectionNode()
         node.addChildNode(nodeModel)
         
-        sceneView.scene.rootNode.addChildNode(node)
+        //sceneView.scene.rootNode.addChildNode(node)
         self.planeNode = node
         
         
@@ -289,24 +291,18 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
         return node
     }
     
-        override func viewWillDisappear(_ animated: Bool) {
-            // Pause ARKit while the view is gone
-            session.pause()
+    override func viewWillDisappear(_ animated: Bool) {
+        // Pause ARKit while the view is gone
+        session.pause()
             
-            super.viewWillDisappear(animated)
-            
-            /* ORIGINAL PLANE DETECTION
-            super.viewWillDisappear(animated)
-    
-            // Pause the view's session
-            sceneView.session.pause()
-            */
-        }
+        super.viewWillDisappear(animated)
 
-        override func didReceiveMemoryWarning() {
-            super.didReceiveMemoryWarning()
-            // Release any cached data, images, etc that aren't in use.
-        }
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Release any cached data, images, etc that aren't in use.
+    }
 
 }
 

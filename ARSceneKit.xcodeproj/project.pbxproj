@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8516879120E2C10400F8A8E8 /* mac_palette.scn in Resources */ = {isa = PBXBuildFile; fileRef = 8516878F20E2C10400F8A8E8 /* mac_palette.scn */; };
 		8516879220E2C10400F8A8E8 /* mac_palette_material.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8516879020E2C10400F8A8E8 /* mac_palette_material.jpg */; };
 		8516879720E2C19D00F8A8E8 /* urban_material.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8516879620E2C19D00F8A8E8 /* urban_material.jpg */; };
 		8516879B20E2C1CE00F8A8E8 /* mac_fix_material.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8516879A20E2C1CE00F8A8E8 /* mac_fix_material.jpg */; };
@@ -23,6 +22,9 @@
 		C149B41020EBCF76007CF0AC /* PlaneDetectionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149B40F20EBCF76007CF0AC /* PlaneDetectionNode.swift */; };
 		C17F4B9020EA82B700492C3E /* ProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17F4B8F20EA82B700492C3E /* ProductList.swift */; };
 		C17F4B9220EA82BD00492C3E /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17F4B9120EA82BD00492C3E /* ProductCollectionViewCell.swift */; };
+		C18B08DB20EEC4C3000F5679 /* reflective.png in Resources */ = {isa = PBXBuildFile; fileRef = C18B08DA20EEC4C2000F5679 /* reflective.png */; };
+		C18B08DD20EEC655000F5679 /* reflective.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C18B08DC20EEC655000F5679 /* reflective.jpg */; };
+		C18B08DF20EECA56000F5679 /* mac_palette.scn in Resources */ = {isa = PBXBuildFile; fileRef = C18B08DE20EECA56000F5679 /* mac_palette.scn */; };
 		E4231FD01F0FEAD500CBE4C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4231FCF1F0FEAD500CBE4C1 /* AppDelegate.swift */; };
 		E4231FD41F0FEAD500CBE4C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4231FD31F0FEAD500CBE4C1 /* ViewController.swift */; };
 		E4231FD71F0FEAD500CBE4C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4231FD51F0FEAD500CBE4C1 /* Main.storyboard */; };
@@ -31,7 +33,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8516878F20E2C10400F8A8E8 /* mac_palette.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = mac_palette.scn; sourceTree = "<group>"; };
 		8516879020E2C10400F8A8E8 /* mac_palette_material.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mac_palette_material.jpg; sourceTree = "<group>"; };
 		8516879620E2C19D00F8A8E8 /* urban_material.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = urban_material.jpg; sourceTree = "<group>"; };
 		8516879A20E2C1CE00F8A8E8 /* mac_fix_material.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mac_fix_material.jpg; sourceTree = "<group>"; };
@@ -47,6 +48,9 @@
 		C149B40F20EBCF76007CF0AC /* PlaneDetectionNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneDetectionNode.swift; sourceTree = "<group>"; };
 		C17F4B8F20EA82B700492C3E /* ProductList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductList.swift; sourceTree = "<group>"; };
 		C17F4B9120EA82BD00492C3E /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		C18B08DA20EEC4C2000F5679 /* reflective.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reflective.png; sourceTree = "<group>"; };
+		C18B08DC20EEC655000F5679 /* reflective.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = reflective.jpg; sourceTree = "<group>"; };
+		C18B08DE20EECA56000F5679 /* mac_palette.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = mac_palette.scn; sourceTree = "<group>"; };
 		E4231FCC1F0FEAD500CBE4C1 /* ARSceneKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARSceneKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4231FCF1F0FEAD500CBE4C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4231FD31F0FEAD500CBE4C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,7 +87,7 @@
 				8516879A20E2C1CE00F8A8E8 /* mac_fix_material.jpg */,
 				8516879C20E2C1D800F8A8E8 /* mac_fix.scn */,
 				8516879020E2C10400F8A8E8 /* mac_palette_material.jpg */,
-				8516878F20E2C10400F8A8E8 /* mac_palette.scn */,
+				C18B08DE20EECA56000F5679 /* mac_palette.scn */,
 			);
 			path = MAC;
 			sourceTree = "<group>";
@@ -109,6 +113,8 @@
 		C149B40020EAB9A8007CF0AC /* Perfume */ = {
 			isa = PBXGroup;
 			children = (
+				C18B08DC20EEC655000F5679 /* reflective.jpg */,
+				C18B08DA20EEC4C2000F5679 /* reflective.png */,
 				C149B40720EAB9B1007CF0AC /* back.jpeg */,
 				C149B40420EAB9B1007CF0AC /* bottom.jpeg */,
 				C149B40520EAB9B1007CF0AC /* front.jpeg */,
@@ -217,13 +223,15 @@
 				E4231FD91F0FEAD500CBE4C1 /* Assets.xcassets in Resources */,
 				C149B40B20EAB9B2007CF0AC /* bottom.jpeg in Resources */,
 				C149B40D20EAB9B2007CF0AC /* side 1.jpeg in Resources */,
+				C18B08DD20EEC655000F5679 /* reflective.jpg in Resources */,
 				8516879720E2C19D00F8A8E8 /* urban_material.jpg in Resources */,
 				8516879220E2C10400F8A8E8 /* mac_palette_material.jpg in Resources */,
 				8516879E20E2C6E200F8A8E8 /* mac_fix.scn in Resources */,
-				8516879120E2C10400F8A8E8 /* mac_palette.scn in Resources */,
+				C18B08DF20EECA56000F5679 /* mac_palette.scn in Resources */,
 				C149B40820EAB9B2007CF0AC /* side 2.jpeg in Resources */,
 				8516879F20E2C6E500F8A8E8 /* urban.scn in Resources */,
 				8516879B20E2C1CE00F8A8E8 /* mac_fix_material.jpg in Resources */,
+				C18B08DB20EEC4C3000F5679 /* reflective.png in Resources */,
 				E4231FD71F0FEAD500CBE4C1 /* Main.storyboard in Resources */,
 				C149B40C20EAB9B2007CF0AC /* front.jpeg in Resources */,
 				C149B40E20EAB9B2007CF0AC /* back.jpeg in Resources */,
