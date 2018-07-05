@@ -46,9 +46,6 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
         
         screenCenter = view.center
         
-        // Get the scene the model is stored in
-        //let modelScene = SCNScene(named: "mac_fix.scn")!
-        
         if let modelScene = SCNScene(named:"mac_palette.scn") {
             //nodeModel =  modelScene.rootNode.childNode(withName: nodeName, recursively: true)
             nodeModel = modelScene.rootNode
