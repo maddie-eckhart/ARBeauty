@@ -21,6 +21,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
     private var screenCenter: CGPoint!
     private var selectedNode: SCNNode?
     private var originalRotation: SCNVector3?
+    private var originalSize: SCNVector3?
     let nodeName = "makeupScene"
     
     let session = ARSession()
@@ -73,26 +74,10 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
         let rotationGesture = UIRotationGestureRecognizer(target: self, action: #selector(viewRotated))
         sceneView.addGestureRecognizer(rotationGesture)
         
+        // Track pinch gestures on the screen
+        let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(viewPinched(_:)))
+        sceneView.addGestureRecognizer(pinchGesture)
         
-        
-        /* ORIGINAL PLANE DETECTION
-        super.viewDidLoad()
-        
-        sceneView.delegate = self
-        sceneView.showsStatistics = true
-        //sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints, ARSCNDebugOptions.showWorldOrigin]
-        //sceneView.antialiasingMode = .multisampling4X
-        
-        // Create a new scene
-        let scene = SCNScene()
-        sceneView.scene = scene
-       
-        if let modelScene = SCNScene(named:"mac_palette.scn") {
-            nodeModel =  modelScene.rootNode.childNode(withName: nodeName, recursively: true)
-        }else{
-            print("can't load model")
-        }
- */
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -199,9 +184,6 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
         // Add the model to the scene
         sceneView.scene.rootNode.addChildNode(newNode)
         
-        // stops the yellow square from moving
-        //planeNode = nil
-        
     }
     
     @objc private func viewPanned(_ gesture: UIPanGestureRecognizer) {
@@ -220,7 +202,6 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
             let newPosition = float3(transform.columns.3.x, transform.columns.3.y, transform.columns.3.z)
             selectedNode?.simdPosition = newPosition
         default:
-            // Remove the reference to the node
             selectedNode = nil
         }
     }
@@ -239,6 +220,22 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
             node.eulerAngles = originalRotation
         default:
             originalRotation = nil
+        }
+    }
+    
+    @objc private func viewPinched(_ gesture: UIPinchGestureRecognizer) {
+        let location = gesture.location(in: sceneView)
+        
+        guard let node = node(at: location) else { return }
+        switch gesture.state {
+        case .began:
+            originalSize = node.scale
+        case .changed:
+            let action = SCNAction.scale(by: gesture.scale, duration: 0.1)
+            node.runAction(action)
+            gesture.scale = 1
+        default:
+            originalSize = nil
         }
     }
     
