@@ -5,6 +5,7 @@
 //  Created by Madeline Eckhart on 7/2/18.
 //  Copyright © 2018 MaddGaming. All rights reserved
 //
+// https://blog.rocketinsights.com/how-to-arkit/
 
 import UIKit
 import SceneKit
@@ -17,6 +18,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
     @IBOutlet weak var searchingLabel: UILabel!
     
     private var nodeModel:SCNNode!
+    private var tempMaterial: SCNMaterial = SCNMaterial()
     var planeNode: PlaneDetectionNode?
     private var screenCenter: CGPoint!
     private var selectedNode: SCNNode?
@@ -47,20 +49,18 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
         
         screenCenter = view.center
         
-        if let modelScene = SCNScene(named:"mac_palette.scn") {
+        if let modelScene = SCNScene(named:"perfume.scn") {
             //nodeModel =  modelScene.rootNode.childNode(withName: nodeName, recursively: true)
             nodeModel = modelScene.rootNode
+            
+            tempMaterial.diffuse.contents = UIImage(named: "front")
+            let otherMaterial = SCNMaterial()
+            otherMaterial.diffuse.contents = UIColor.blue
+            nodeModel.geometry?.materials = [tempMaterial, otherMaterial, otherMaterial, otherMaterial, otherMaterial, otherMaterial]
+            
         }else{
             print("can't load model")
         }
-        // Get the model from the root node of the scene
-        //nodeModel = modelScene.rootNode
-        
-        // Scale down the model to fit the real world better
-        //nodeModel.scale = SCNVector3(0.001, 0.001, 0.001)
-        
-        // Rotate the model 90 degrees so it sits even to the floor
-        //nodeModel.transform = SCNMatrix4Rotate(nodeModel.transform, Float.pi / 2.0, 1.0, 0.0, 0.0)
         
         // Track taps on screen
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewTapped))
@@ -92,27 +92,36 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
     }
     
     // Product Collection View
-    var products: [ProductList] = []
+    // var products: [ProductList] = []
+    var materials: [UIImage] = []
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // list of products
+        /* list of products
         let mac: ProductList = ProductList(newName: "mac", newImage: UIImage(named: "mac_palette_material")!)
         let foundation: ProductList = ProductList(newName: "foundation", newImage: UIImage(named: "mac_fix_material")!)
         let perfume: ProductList = ProductList(newName: "perfume", newImage: UIImage(named: "front")!)
         products.append(mac)
         products.append(foundation)
         products.append(perfume)
+         */
+        // list of materials
+        materials.append(#imageLiteral(resourceName: "purple"))
+        materials.append(#imageLiteral(resourceName: "green"))
+        materials.append(#imageLiteral(resourceName: "salmon"))
         return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return products.count
+        //return products.count
+        return materials.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ProductCollectionViewCell
-        let image = products[indexPath.row].image
+        //let image = products[indexPath.row].image
+        let image = materials[indexPath.row]
         cell.imageView.image = image
+        //cell.layer.cornerRadius = 4
         return cell
     }
     
@@ -122,7 +131,8 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
         cell?.layer.borderWidth = 2.0
         cell?.layer.borderColor = UIColor.red.cgColor
         
-        // choose product
+        
+        /* choose product
         if products[indexPath.row].name == "mac" {
             if let modelScene = SCNScene(named:"mac_palette.scn") {
                 self.nodeModel =  modelScene.rootNode.childNode(withName: self.nodeName, recursively: true)
@@ -150,6 +160,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
                 print("can't load model")
             }
         }
+         */
 
     }
     
@@ -277,7 +288,6 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
         planeNode.position = SCNVector3(x: positionColumn.x, y: positionColumn.y, z: positionColumn.z)
     }
     
-   
     // Override to create and configure nodes for anchors added to the view's session.
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
         let node = SCNNode()

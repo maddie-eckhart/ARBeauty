@@ -24,26 +24,35 @@
                                     <outlet property="delegate" destination="BV1-FR-VrT" id="uoM-1n-jEE"/>
                                 </connections>
                             </arscnView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wLQ-jK-tAN">
-                                <rect key="frame" x="19" y="628" width="340" height="73"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Searching for the floor..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xHK-NE-3Db">
+                                <rect key="frame" x="0.0" y="344" width="375" height="46"/>
+                                <color key="backgroundColor" red="0.54608848222016082" green="0.54608848222016082" blue="0.54608848222016082" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="ORU-z6-Jcv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wLQ-jK-tAN">
+                                <rect key="frame" x="0.0" y="639" width="273" height="73"/>
                                 <color key="backgroundColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="0.54620612157534243" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="J16-Hb-nwb">
-                                    <size key="itemSize" width="70" height="70"/>
+                                    <size key="itemSize" width="60" height="60"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="uW5-kI-VO5" customClass="ProductCollectionViewCell" customModule="ARSceneKit" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="1.6666666666666667" width="70" height="70"/>
+                                        <rect key="frame" x="0.0" y="6.666666666666667" width="60" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a0U-3U-6ko">
-                                                    <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
@@ -59,16 +68,6 @@
                                     <outlet property="delegate" destination="BV1-FR-VrT" id="guP-2x-Vvq"/>
                                 </connections>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Searching for the floor..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xHK-NE-3Db">
-                                <rect key="frame" x="0.0" y="344" width="375" height="46"/>
-                                <color key="backgroundColor" red="0.54608848222016082" green="0.54608848222016082" blue="0.54608848222016082" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="ORU-z6-Jcv"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -76,19 +75,14 @@
                             <constraint firstItem="xHK-NE-3Db" firstAttribute="trailing" secondItem="gKk-6m-LAK" secondAttribute="trailing" id="F3S-or-RK4"/>
                             <constraint firstItem="gKk-6m-LAK" firstAttribute="trailing" secondItem="N22-6A-bqf" secondAttribute="trailing" id="PNz-xy-mMY"/>
                             <constraint firstItem="xHK-NE-3Db" firstAttribute="top" secondItem="gKk-6m-LAK" secondAttribute="top" constant="256" id="Riw-qg-35b"/>
+                            <constraint firstItem="wLQ-jK-tAN" firstAttribute="leading" secondItem="gKk-6m-LAK" secondAttribute="leading" id="SwH-yp-e2h"/>
                             <constraint firstAttribute="bottom" secondItem="N22-6A-bqf" secondAttribute="bottom" id="b8l-l8-4mi"/>
                             <constraint firstItem="xHK-NE-3Db" firstAttribute="leading" secondItem="gKk-6m-LAK" secondAttribute="leading" id="muu-c7-Ass"/>
                             <constraint firstItem="N22-6A-bqf" firstAttribute="leading" secondItem="gKk-6m-LAK" secondAttribute="leading" id="wgf-ky-m0M"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gKk-6m-LAK"/>
                     </view>
-                    <navigationItem key="navigationItem" id="evg-fP-1ad">
-                        <barButtonItem key="rightBarButtonItem" systemItem="organize" id="bGK-5V-1DG">
-                            <connections>
-                                <action selector="chooseModelWithSender:" destination="BV1-FR-VrT" id="lqs-4c-V60"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="evg-fP-1ad"/>
                     <connections>
                         <outlet property="collectionView" destination="wLQ-jK-tAN" id="NsP-lZ-o2E"/>
                         <outlet property="sceneView" destination="N22-6A-bqf" id="Qie-VX-RRf"/>
