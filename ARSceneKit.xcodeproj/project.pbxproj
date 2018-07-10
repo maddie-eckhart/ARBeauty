@@ -12,9 +12,8 @@
 		8516879B20E2C1CE00F8A8E8 /* mac_fix_material.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8516879A20E2C1CE00F8A8E8 /* mac_fix_material.jpg */; };
 		8516879E20E2C6E200F8A8E8 /* mac_fix.scn in Resources */ = {isa = PBXBuildFile; fileRef = 8516879C20E2C1D800F8A8E8 /* mac_fix.scn */; };
 		8516879F20E2C6E500F8A8E8 /* urban.scn in Resources */ = {isa = PBXBuildFile; fileRef = 8516879D20E2C1E800F8A8E8 /* urban.scn */; };
-		C1476FBD20F3F08A007F8CCC /* purple.png in Resources */ = {isa = PBXBuildFile; fileRef = C1476FBC20F3F08A007F8CCC /* purple.png */; };
-		C1476FBF20F3F08F007F8CCC /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = C1476FBE20F3F08F007F8CCC /* green.png */; };
-		C1476FC120F3F094007F8CCC /* salmon.png in Resources */ = {isa = PBXBuildFile; fileRef = C1476FC020F3F094007F8CCC /* salmon.png */; };
+		C1476FC420F4037C007F8CCC /* salmon.png in Resources */ = {isa = PBXBuildFile; fileRef = C1476FC320F4037C007F8CCC /* salmon.png */; };
+		C1476FC620F4038D007F8CCC /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = C1476FC520F4038D007F8CCC /* green.png */; };
 		C149B40820EAB9B2007CF0AC /* side 2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C149B40120EAB9B0007CF0AC /* side 2.jpeg */; };
 		C149B40920EAB9B2007CF0AC /* perfume.scn in Resources */ = {isa = PBXBuildFile; fileRef = C149B40220EAB9B0007CF0AC /* perfume.scn */; };
 		C149B40A20EAB9B2007CF0AC /* top.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C149B40320EAB9B1007CF0AC /* top.jpeg */; };
@@ -24,10 +23,11 @@
 		C149B40E20EAB9B2007CF0AC /* back.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C149B40720EAB9B1007CF0AC /* back.jpeg */; };
 		C149B41020EBCF76007CF0AC /* PlaneDetectionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149B40F20EBCF76007CF0AC /* PlaneDetectionNode.swift */; };
 		C17F4B9020EA82B700492C3E /* ProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17F4B8F20EA82B700492C3E /* ProductList.swift */; };
-		C17F4B9220EA82BD00492C3E /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17F4B9120EA82BD00492C3E /* ProductCollectionViewCell.swift */; };
 		C18B08DB20EEC4C3000F5679 /* reflective.png in Resources */ = {isa = PBXBuildFile; fileRef = C18B08DA20EEC4C2000F5679 /* reflective.png */; };
 		C18B08DD20EEC655000F5679 /* reflective.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C18B08DC20EEC655000F5679 /* reflective.jpg */; };
 		C18B08DF20EECA56000F5679 /* mac_palette.scn in Resources */ = {isa = PBXBuildFile; fileRef = C18B08DE20EECA56000F5679 /* mac_palette.scn */; };
+		C1A7559520F5088A00502DF5 /* MaterialCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A7559420F5088A00502DF5 /* MaterialCollectionViewCell.swift */; };
+		C1A7559720F51AE900502DF5 /* purple.png in Resources */ = {isa = PBXBuildFile; fileRef = C1A7559620F51AE900502DF5 /* purple.png */; };
 		E4231FD01F0FEAD500CBE4C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4231FCF1F0FEAD500CBE4C1 /* AppDelegate.swift */; };
 		E4231FD41F0FEAD500CBE4C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4231FD31F0FEAD500CBE4C1 /* ViewController.swift */; };
 		E4231FD71F0FEAD500CBE4C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4231FD51F0FEAD500CBE4C1 /* Main.storyboard */; };
@@ -41,9 +41,8 @@
 		8516879A20E2C1CE00F8A8E8 /* mac_fix_material.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mac_fix_material.jpg; sourceTree = "<group>"; };
 		8516879C20E2C1D800F8A8E8 /* mac_fix.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = mac_fix.scn; sourceTree = "<group>"; };
 		8516879D20E2C1E800F8A8E8 /* urban.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = urban.scn; sourceTree = "<group>"; };
-		C1476FBC20F3F08A007F8CCC /* purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purple.png; sourceTree = "<group>"; };
-		C1476FBE20F3F08F007F8CCC /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = "<group>"; };
-		C1476FC020F3F094007F8CCC /* salmon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = salmon.png; sourceTree = "<group>"; };
+		C1476FC320F4037C007F8CCC /* salmon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = salmon.png; sourceTree = "<group>"; };
+		C1476FC520F4038D007F8CCC /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = "<group>"; };
 		C149B40120EAB9B0007CF0AC /* side 2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "side 2.jpeg"; sourceTree = "<group>"; };
 		C149B40220EAB9B0007CF0AC /* perfume.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = perfume.scn; sourceTree = "<group>"; };
 		C149B40320EAB9B1007CF0AC /* top.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = top.jpeg; sourceTree = "<group>"; };
@@ -53,10 +52,11 @@
 		C149B40720EAB9B1007CF0AC /* back.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = back.jpeg; sourceTree = "<group>"; };
 		C149B40F20EBCF76007CF0AC /* PlaneDetectionNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneDetectionNode.swift; sourceTree = "<group>"; };
 		C17F4B8F20EA82B700492C3E /* ProductList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductList.swift; sourceTree = "<group>"; };
-		C17F4B9120EA82BD00492C3E /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		C18B08DA20EEC4C2000F5679 /* reflective.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reflective.png; sourceTree = "<group>"; };
 		C18B08DC20EEC655000F5679 /* reflective.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = reflective.jpg; sourceTree = "<group>"; };
 		C18B08DE20EECA56000F5679 /* mac_palette.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = mac_palette.scn; sourceTree = "<group>"; };
+		C1A7559420F5088A00502DF5 /* MaterialCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialCollectionViewCell.swift; sourceTree = "<group>"; };
+		C1A7559620F51AE900502DF5 /* purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = purple.png; path = "ARSceneKit/Resources/New Group/purple.png"; sourceTree = SOURCE_ROOT; };
 		E4231FCC1F0FEAD500CBE4C1 /* ARSceneKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARSceneKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4231FCF1F0FEAD500CBE4C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4231FD31F0FEAD500CBE4C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,7 +80,7 @@
 		8516878D20E2C0E000F8A8E8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C1476FBB20F3F01D007F8CCC /* Meterials */,
+				C1476FBB20F3F01D007F8CCC /* Materials */,
 				C149B40020EAB9A8007CF0AC /* Perfume */,
 				8516879320E2C17A00F8A8E8 /* URBAN */,
 				8516878E20E2C0F600F8A8E8 /* MAC */,
@@ -117,13 +117,14 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		C1476FBB20F3F01D007F8CCC /* Meterials */ = {
+		C1476FBB20F3F01D007F8CCC /* Materials */ = {
 			isa = PBXGroup;
 			children = (
-				C1476FBC20F3F08A007F8CCC /* purple.png */,
-				C1476FBE20F3F08F007F8CCC /* green.png */,
-				C1476FC020F3F094007F8CCC /* salmon.png */,
+				C1476FC320F4037C007F8CCC /* salmon.png */,
+				C1A7559620F51AE900502DF5 /* purple.png */,
+				C1476FC520F4038D007F8CCC /* green.png */,
 			);
+			name = Materials;
 			path = Meterials;
 			sourceTree = "<group>";
 		};
@@ -164,7 +165,7 @@
 			children = (
 				E4231FCF1F0FEAD500CBE4C1 /* AppDelegate.swift */,
 				C17F4B8F20EA82B700492C3E /* ProductList.swift */,
-				C17F4B9120EA82BD00492C3E /* ProductCollectionViewCell.swift */,
+				C1A7559420F5088A00502DF5 /* MaterialCollectionViewCell.swift */,
 				C149B40F20EBCF76007CF0AC /* PlaneDetectionNode.swift */,
 				E4231FD31F0FEAD500CBE4C1 /* ViewController.swift */,
 				8516878D20E2C0E000F8A8E8 /* Resources */,
@@ -236,19 +237,19 @@
 			files = (
 				E4231FDC1F0FEAD500CBE4C1 /* LaunchScreen.storyboard in Resources */,
 				C149B40920EAB9B2007CF0AC /* perfume.scn in Resources */,
+				C1A7559720F51AE900502DF5 /* purple.png in Resources */,
 				C149B40A20EAB9B2007CF0AC /* top.jpeg in Resources */,
-				C1476FC120F3F094007F8CCC /* salmon.png in Resources */,
+				C1476FC420F4037C007F8CCC /* salmon.png in Resources */,
 				E4231FD91F0FEAD500CBE4C1 /* Assets.xcassets in Resources */,
 				C149B40B20EAB9B2007CF0AC /* bottom.jpeg in Resources */,
 				C149B40D20EAB9B2007CF0AC /* side 1.jpeg in Resources */,
 				C18B08DD20EEC655000F5679 /* reflective.jpg in Resources */,
-				C1476FBF20F3F08F007F8CCC /* green.png in Resources */,
 				8516879720E2C19D00F8A8E8 /* urban_material.jpg in Resources */,
 				8516879220E2C10400F8A8E8 /* mac_palette_material.jpg in Resources */,
 				8516879E20E2C6E200F8A8E8 /* mac_fix.scn in Resources */,
 				C18B08DF20EECA56000F5679 /* mac_palette.scn in Resources */,
-				C1476FBD20F3F08A007F8CCC /* purple.png in Resources */,
 				C149B40820EAB9B2007CF0AC /* side 2.jpeg in Resources */,
+				C1476FC620F4038D007F8CCC /* green.png in Resources */,
 				8516879F20E2C6E500F8A8E8 /* urban.scn in Resources */,
 				8516879B20E2C1CE00F8A8E8 /* mac_fix_material.jpg in Resources */,
 				C18B08DB20EEC4C3000F5679 /* reflective.png in Resources */,
@@ -267,8 +268,8 @@
 			files = (
 				C17F4B9020EA82B700492C3E /* ProductList.swift in Sources */,
 				E4231FD41F0FEAD500CBE4C1 /* ViewController.swift in Sources */,
-				C17F4B9220EA82BD00492C3E /* ProductCollectionViewCell.swift in Sources */,
 				C149B41020EBCF76007CF0AC /* PlaneDetectionNode.swift in Sources */,
+				C1A7559520F5088A00502DF5 /* MaterialCollectionViewCell.swift in Sources */,
 				E4231FD01F0FEAD500CBE4C1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
