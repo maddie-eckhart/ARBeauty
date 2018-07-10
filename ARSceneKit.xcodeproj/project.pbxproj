@@ -28,6 +28,30 @@
 		C18B08DF20EECA56000F5679 /* mac_palette.scn in Resources */ = {isa = PBXBuildFile; fileRef = C18B08DE20EECA56000F5679 /* mac_palette.scn */; };
 		C1A7559520F5088A00502DF5 /* MaterialCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A7559420F5088A00502DF5 /* MaterialCollectionViewCell.swift */; };
 		C1A7559720F51AE900502DF5 /* purple.png in Resources */ = {isa = PBXBuildFile; fileRef = C1A7559620F51AE900502DF5 /* purple.png */; };
+		C1F810ED20F53E1200510AE4 /* Niagara.png in Resources */ = {isa = PBXBuildFile; fileRef = C1F810D620F53E0F00510AE4 /* Niagara.png */; };
+		C1F810EE20F53E1200510AE4 /* Scarlett Empress.png in Resources */ = {isa = PBXBuildFile; fileRef = C1F810D720F53E0F00510AE4 /* Scarlett Empress.png */; };
+		C1F810EF20F53E1200510AE4 /* Tolede.png in Resources */ = {isa = PBXBuildFile; fileRef = C1F810D820F53E0F00510AE4 /* Tolede.png */; };
+		C1F810F020F53E1200510AE4 /* Fire Down Below.png in Resources */ = {isa = PBXBuildFile; fileRef = C1F810D920F53E1000510AE4 /* Fire Down Below.png */; };
+		C1F810F120F53E1200510AE4 /* Gipsy.png in Resources */ = {isa = PBXBuildFile; fileRef = C1F810DA20F53E1000510AE4 /* Gipsy.png */; };
+		C1F810F220F53E1200510AE4 /* Falbala.png in Resources */ = {isa = PBXBuildFile; fileRef = C1F810DB20F53E1000510AE4 /* Falbala.png */; };
+		C1F810F320F53E1200510AE4 /* Sexual Healing.png in Resources */ = {isa = PBXBuildFile; fileRef = C1F810DC20F53E1000510AE4 /* Sexual Healing.png */; };
+		C1F810F420F53E1200510AE4 /* Shrinagar.png in Resources */ = {isa = PBXBuildFile; fileRef = C1F810DD20F53E1000510AE4 /* Shrinagar.png */; };
+		C1F810F520F53E1200510AE4 /* Schiap.png in Resources */ = {isa = PBXBuildFile; fileRef = C1F810DE20F53E1000510AE4 /* Schiap.png */; };
+		C1F810F620F53E1200510AE4 /* Belle Du Jour.png in Resources */ = {isa = PBXBuildFile; fileRef = C1F810DF20F53E1000510AE4 /* Belle Du Jour.png */; };
+		C1F810F720F53E1200510AE4 /* Cruising.png in Resources */ = {isa = PBXBuildFile; fileRef = C1F810E020F53E1000510AE4 /* Cruising.png */; };
+		C1F810F820F53E1200510AE4 /* Catfight.png in Resources */ = {isa = PBXBuildFile; fileRef = C1F810E120F53E1000510AE4 /* Catfight.png */; };
+		C1F810F920F53E1200510AE4 /* Heat Wave.png in Resources */ = {isa = PBXBuildFile; fileRef = C1F810E220F53E1100510AE4 /* Heat Wave.png */; };
+		C1F810FA20F53E1200510AE4 /* Fast Ride.png in Resources */ = {isa = PBXBuildFile; fileRef = C1F810E320F53E1100510AE4 /* Fast Ride.png */; };
+		C1F810FB20F53E1200510AE4 /* Pigalle.png in Resources */ = {isa = PBXBuildFile; fileRef = C1F810E420F53E1100510AE4 /* Pigalle.png */; };
+		C1F810FC20F53E1200510AE4 /* Roman Holiday.png in Resources */ = {isa = PBXBuildFile; fileRef = C1F810E520F53E1100510AE4 /* Roman Holiday.png */; };
+		C1F810FD20F53E1200510AE4 /* Rosecliff.png in Resources */ = {isa = PBXBuildFile; fileRef = C1F810E620F53E1100510AE4 /* Rosecliff.png */; };
+		C1F810FE20F53E1200510AE4 /* Red Lizard.png in Resources */ = {isa = PBXBuildFile; fileRef = C1F810E720F53E1100510AE4 /* Red Lizard.png */; };
+		C1F810FF20F53E1200510AE4 /* Afghan Red.png in Resources */ = {isa = PBXBuildFile; fileRef = C1F810E820F53E1100510AE4 /* Afghan Red.png */; };
+		C1F8110020F53E1200510AE4 /* Banned Red.png in Resources */ = {isa = PBXBuildFile; fileRef = C1F810E920F53E1100510AE4 /* Banned Red.png */; };
+		C1F8110120F53E1200510AE4 /* Damage.png in Resources */ = {isa = PBXBuildFile; fileRef = C1F810EA20F53E1100510AE4 /* Damage.png */; };
+		C1F8110220F53E1200510AE4 /* Funny Face.png in Resources */ = {isa = PBXBuildFile; fileRef = C1F810EB20F53E1100510AE4 /* Funny Face.png */; };
+		C1F8110320F53E1200510AE4 /* Dolce Vita.png in Resources */ = {isa = PBXBuildFile; fileRef = C1F810EC20F53E1200510AE4 /* Dolce Vita.png */; };
+		C1F8110520F5632E00510AE4 /* PDPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F8110420F5632E00510AE4 /* PDPViewController.swift */; };
 		E4231FD01F0FEAD500CBE4C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4231FCF1F0FEAD500CBE4C1 /* AppDelegate.swift */; };
 		E4231FD41F0FEAD500CBE4C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4231FD31F0FEAD500CBE4C1 /* ViewController.swift */; };
 		E4231FD71F0FEAD500CBE4C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4231FD51F0FEAD500CBE4C1 /* Main.storyboard */; };
@@ -57,6 +81,30 @@
 		C18B08DE20EECA56000F5679 /* mac_palette.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = mac_palette.scn; sourceTree = "<group>"; };
 		C1A7559420F5088A00502DF5 /* MaterialCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialCollectionViewCell.swift; sourceTree = "<group>"; };
 		C1A7559620F51AE900502DF5 /* purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = purple.png; path = "ARSceneKit/Resources/New Group/purple.png"; sourceTree = SOURCE_ROOT; };
+		C1F810D620F53E0F00510AE4 /* Niagara.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Niagara.png; sourceTree = "<group>"; };
+		C1F810D720F53E0F00510AE4 /* Scarlett Empress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Scarlett Empress.png"; sourceTree = "<group>"; };
+		C1F810D820F53E0F00510AE4 /* Tolede.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tolede.png; sourceTree = "<group>"; };
+		C1F810D920F53E1000510AE4 /* Fire Down Below.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fire Down Below.png"; sourceTree = "<group>"; };
+		C1F810DA20F53E1000510AE4 /* Gipsy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gipsy.png; sourceTree = "<group>"; };
+		C1F810DB20F53E1000510AE4 /* Falbala.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Falbala.png; sourceTree = "<group>"; };
+		C1F810DC20F53E1000510AE4 /* Sexual Healing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sexual Healing.png"; sourceTree = "<group>"; };
+		C1F810DD20F53E1000510AE4 /* Shrinagar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Shrinagar.png; sourceTree = "<group>"; };
+		C1F810DE20F53E1000510AE4 /* Schiap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Schiap.png; sourceTree = "<group>"; };
+		C1F810DF20F53E1000510AE4 /* Belle Du Jour.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Belle Du Jour.png"; sourceTree = "<group>"; };
+		C1F810E020F53E1000510AE4 /* Cruising.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cruising.png; sourceTree = "<group>"; };
+		C1F810E120F53E1000510AE4 /* Catfight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Catfight.png; sourceTree = "<group>"; };
+		C1F810E220F53E1100510AE4 /* Heat Wave.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Heat Wave.png"; sourceTree = "<group>"; };
+		C1F810E320F53E1100510AE4 /* Fast Ride.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fast Ride.png"; sourceTree = "<group>"; };
+		C1F810E420F53E1100510AE4 /* Pigalle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pigalle.png; sourceTree = "<group>"; };
+		C1F810E520F53E1100510AE4 /* Roman Holiday.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Roman Holiday.png"; sourceTree = "<group>"; };
+		C1F810E620F53E1100510AE4 /* Rosecliff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rosecliff.png; sourceTree = "<group>"; };
+		C1F810E720F53E1100510AE4 /* Red Lizard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Red Lizard.png"; sourceTree = "<group>"; };
+		C1F810E820F53E1100510AE4 /* Afghan Red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Afghan Red.png"; sourceTree = "<group>"; };
+		C1F810E920F53E1100510AE4 /* Banned Red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Banned Red.png"; sourceTree = "<group>"; };
+		C1F810EA20F53E1100510AE4 /* Damage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Damage.png; sourceTree = "<group>"; };
+		C1F810EB20F53E1100510AE4 /* Funny Face.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Funny Face.png"; sourceTree = "<group>"; };
+		C1F810EC20F53E1200510AE4 /* Dolce Vita.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dolce Vita.png"; sourceTree = "<group>"; };
+		C1F8110420F5632E00510AE4 /* PDPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDPViewController.swift; sourceTree = "<group>"; };
 		E4231FCC1F0FEAD500CBE4C1 /* ARSceneKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARSceneKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4231FCF1F0FEAD500CBE4C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4231FD31F0FEAD500CBE4C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +128,7 @@
 		8516878D20E2C0E000F8A8E8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C1F810D520F53AB900510AE4 /* NARS Colors */,
 				C1476FBB20F3F01D007F8CCC /* Materials */,
 				C149B40020EAB9A8007CF0AC /* Perfume */,
 				8516879320E2C17A00F8A8E8 /* URBAN */,
@@ -144,6 +193,36 @@
 			path = Perfume;
 			sourceTree = "<group>";
 		};
+		C1F810D520F53AB900510AE4 /* NARS Colors */ = {
+			isa = PBXGroup;
+			children = (
+				C1F810E820F53E1100510AE4 /* Afghan Red.png */,
+				C1F810E920F53E1100510AE4 /* Banned Red.png */,
+				C1F810DF20F53E1000510AE4 /* Belle Du Jour.png */,
+				C1F810E120F53E1000510AE4 /* Catfight.png */,
+				C1F810E020F53E1000510AE4 /* Cruising.png */,
+				C1F810EA20F53E1100510AE4 /* Damage.png */,
+				C1F810EC20F53E1200510AE4 /* Dolce Vita.png */,
+				C1F810DB20F53E1000510AE4 /* Falbala.png */,
+				C1F810E320F53E1100510AE4 /* Fast Ride.png */,
+				C1F810D920F53E1000510AE4 /* Fire Down Below.png */,
+				C1F810EB20F53E1100510AE4 /* Funny Face.png */,
+				C1F810DA20F53E1000510AE4 /* Gipsy.png */,
+				C1F810E220F53E1100510AE4 /* Heat Wave.png */,
+				C1F810D620F53E0F00510AE4 /* Niagara.png */,
+				C1F810E420F53E1100510AE4 /* Pigalle.png */,
+				C1F810E720F53E1100510AE4 /* Red Lizard.png */,
+				C1F810E520F53E1100510AE4 /* Roman Holiday.png */,
+				C1F810E620F53E1100510AE4 /* Rosecliff.png */,
+				C1F810D720F53E0F00510AE4 /* Scarlett Empress.png */,
+				C1F810DE20F53E1000510AE4 /* Schiap.png */,
+				C1F810DC20F53E1000510AE4 /* Sexual Healing.png */,
+				C1F810DD20F53E1000510AE4 /* Shrinagar.png */,
+				C1F810D820F53E0F00510AE4 /* Tolede.png */,
+			);
+			path = "NARS Colors";
+			sourceTree = "<group>";
+		};
 		E4231FC31F0FEAD500CBE4C1 = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +247,7 @@
 				C1A7559420F5088A00502DF5 /* MaterialCollectionViewCell.swift */,
 				C149B40F20EBCF76007CF0AC /* PlaneDetectionNode.swift */,
 				E4231FD31F0FEAD500CBE4C1 /* ViewController.swift */,
+				C1F8110420F5632E00510AE4 /* PDPViewController.swift */,
 				8516878D20E2C0E000F8A8E8 /* Resources */,
 				85CA642520E284360059B0F1 /* Storyboards */,
 				E4231FD81F0FEAD500CBE4C1 /* Assets.xcassets */,
@@ -238,24 +318,47 @@
 				E4231FDC1F0FEAD500CBE4C1 /* LaunchScreen.storyboard in Resources */,
 				C149B40920EAB9B2007CF0AC /* perfume.scn in Resources */,
 				C1A7559720F51AE900502DF5 /* purple.png in Resources */,
+				C1F810F920F53E1200510AE4 /* Heat Wave.png in Resources */,
+				C1F810F720F53E1200510AE4 /* Cruising.png in Resources */,
 				C149B40A20EAB9B2007CF0AC /* top.jpeg in Resources */,
 				C1476FC420F4037C007F8CCC /* salmon.png in Resources */,
+				C1F810F520F53E1200510AE4 /* Schiap.png in Resources */,
+				C1F810EE20F53E1200510AE4 /* Scarlett Empress.png in Resources */,
+				C1F810FF20F53E1200510AE4 /* Afghan Red.png in Resources */,
 				E4231FD91F0FEAD500CBE4C1 /* Assets.xcassets in Resources */,
+				C1F8110020F53E1200510AE4 /* Banned Red.png in Resources */,
+				C1F8110320F53E1200510AE4 /* Dolce Vita.png in Resources */,
+				C1F810F320F53E1200510AE4 /* Sexual Healing.png in Resources */,
+				C1F810FD20F53E1200510AE4 /* Rosecliff.png in Resources */,
 				C149B40B20EAB9B2007CF0AC /* bottom.jpeg in Resources */,
+				C1F810FB20F53E1200510AE4 /* Pigalle.png in Resources */,
 				C149B40D20EAB9B2007CF0AC /* side 1.jpeg in Resources */,
 				C18B08DD20EEC655000F5679 /* reflective.jpg in Resources */,
+				C1F810EF20F53E1200510AE4 /* Tolede.png in Resources */,
 				8516879720E2C19D00F8A8E8 /* urban_material.jpg in Resources */,
+				C1F810F420F53E1200510AE4 /* Shrinagar.png in Resources */,
 				8516879220E2C10400F8A8E8 /* mac_palette_material.jpg in Resources */,
+				C1F810F820F53E1200510AE4 /* Catfight.png in Resources */,
 				8516879E20E2C6E200F8A8E8 /* mac_fix.scn in Resources */,
 				C18B08DF20EECA56000F5679 /* mac_palette.scn in Resources */,
 				C149B40820EAB9B2007CF0AC /* side 2.jpeg in Resources */,
 				C1476FC620F4038D007F8CCC /* green.png in Resources */,
+				C1F810F020F53E1200510AE4 /* Fire Down Below.png in Resources */,
 				8516879F20E2C6E500F8A8E8 /* urban.scn in Resources */,
 				8516879B20E2C1CE00F8A8E8 /* mac_fix_material.jpg in Resources */,
 				C18B08DB20EEC4C3000F5679 /* reflective.png in Resources */,
+				C1F810F220F53E1200510AE4 /* Falbala.png in Resources */,
 				E4231FD71F0FEAD500CBE4C1 /* Main.storyboard in Resources */,
+				C1F810F120F53E1200510AE4 /* Gipsy.png in Resources */,
+				C1F810FE20F53E1200510AE4 /* Red Lizard.png in Resources */,
 				C149B40C20EAB9B2007CF0AC /* front.jpeg in Resources */,
 				C149B40E20EAB9B2007CF0AC /* back.jpeg in Resources */,
+				C1F810FA20F53E1200510AE4 /* Fast Ride.png in Resources */,
+				C1F8110120F53E1200510AE4 /* Damage.png in Resources */,
+				C1F810F620F53E1200510AE4 /* Belle Du Jour.png in Resources */,
+				C1F8110220F53E1200510AE4 /* Funny Face.png in Resources */,
+				C1F810FC20F53E1200510AE4 /* Roman Holiday.png in Resources */,
+				C1F810ED20F53E1200510AE4 /* Niagara.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +370,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C17F4B9020EA82B700492C3E /* ProductList.swift in Sources */,
+				C1F8110520F5632E00510AE4 /* PDPViewController.swift in Sources */,
 				E4231FD41F0FEAD500CBE4C1 /* ViewController.swift in Sources */,
 				C149B41020EBCF76007CF0AC /* PlaneDetectionNode.swift in Sources */,
 				C1A7559520F5088A00502DF5 /* MaterialCollectionViewCell.swift in Sources */,

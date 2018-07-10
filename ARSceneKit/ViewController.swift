@@ -29,7 +29,6 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
     private var originalSize: SCNVector3?
     let nodeName = "makeupScene"
     
-    
     let session = ARSession()
     let sessionConfiguration: ARWorldTrackingConfiguration = {
         let config = ARWorldTrackingConfiguration()
@@ -97,10 +96,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
     func numberOfSections(in collectionView: UICollectionView) -> Int {
 
         // list of materials
-        materials.append(UIImage(named: "purple")!)
-        materials.append(#imageLiteral(resourceName: "green"))
-        materials.append(#imageLiteral(resourceName: "salmon"))
-        materials.append(#imageLiteral(resourceName: "front"))
+        setMaterials()
         return 1
     }
     
@@ -114,19 +110,21 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! MaterialCollectionViewCell
         let image:UIImage = materials[indexPath.row]
         cell.imageView.image = image
-        cell.layer.cornerRadius = 4
+        cell.layer.cornerRadius = cell.imageView.frame.size.width / 2
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        
         // cell highlight when selected
         let cell = collectionView.cellForItem(at: indexPath)
-        cell?.layer.borderWidth = 2.0
-        cell?.layer.borderColor = UIColor.red.cgColor
+        cell?.layer.borderWidth = 3.0
+        cell?.layer.borderColor = UIColor.white.cgColor
         
         let image = materials[indexPath.row]
         nodeModel?.geometry?.firstMaterial?.diffuse.contents = image
+
     }
 
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
@@ -244,7 +242,9 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
                 self.searchingLabel.alpha = 0.0
             }, completion: { _ in
                 self.searchingLabel.isHidden = true
+                
             })
+            self.launchAlert()
         }
         
     }
@@ -271,6 +271,41 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
         return node
     }
 
+   //----------------------------------------------- Auxillary Functions -----------------------------------------------//
+    
+    func launchAlert() {
+        let alertController = UIAlertController(title: "Floor Detected!", message: "Tap on screen to place product", preferredStyle: .alert)
+        let alertText = UIAlertAction(title: "OK", style: .cancel)
+        alertController.addAction(alertText)
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    func setMaterials() {
+        materials.append(UIImage(named: "Afghan Red")!)
+        materials.append(UIImage(named: "Banned Red")!)
+        materials.append(UIImage(named: "Belle Du Jour")!)
+        materials.append(UIImage(named: "Catfight")!)
+        materials.append(UIImage(named: "Cruising")!)
+        materials.append(UIImage(named: "Damage")!)
+        materials.append(UIImage(named: "Dolce Vita")!)
+        materials.append(UIImage(named: "Falbala")!)
+        materials.append(UIImage(named: "Fast Ride")!)
+        materials.append(UIImage(named: "Fire Down Below")!)
+        materials.append(UIImage(named: "Funny Face")!)
+        materials.append(UIImage(named: "Gipsy")!)
+        materials.append(UIImage(named: "Heat Wave")!)
+        materials.append(UIImage(named: "Niagara")!)
+        materials.append(UIImage(named: "Pigalle")!)
+        materials.append(UIImage(named: "Red Lizard")!)
+        materials.append(UIImage(named: "Roman Holiday")!)
+        materials.append(UIImage(named: "Rosecliff")!)
+        materials.append(UIImage(named: "Scarlett Empress")!)
+        materials.append(UIImage(named: "Schiap")!)
+        materials.append(UIImage(named: "Sexual Healing")!)
+        materials.append(UIImage(named: "Shrinagar")!)
+        materials.append(UIImage(named: "Tolede")!)
+    }
+    
    //----------------------------------------------- View After Loading -----------------------------------------------//
     
     override func viewWillDisappear(_ animated: Bool) {
