@@ -80,7 +80,11 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
         
         if let modelScene = SCNScene(named:"lipstick.scn") {
             nodeModel = modelScene.rootNode.childNode(withName: nodeName, recursively: true)!
-            //nodeModel.geometry?.firstMaterial?.diffuse.contents = UIColor.blue
+            //Set the size and position of 3d object (easier to set in code vs in IB editor)
+            nodeModel.pivot = SCNMatrix4MakeTranslation(0.0, 0.0, 0.0)
+            nodeModel.scale = SCNVector3(0.0002, 0.0002, 0.0002)
+            let lipstick = self.nodeModel.childNode(withName: "Lathe_NURBS-1", recursively: true)!
+            lipstick.geometry?.firstMaterial?.diffuse.contents = hexStringToUIColor(hex: "#B9405D")
         }else{
             print("can't load model")
         }
@@ -200,6 +204,10 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
             let newNode = nodeModel.flattenedClone()
             newNode.simdPosition = position
             
+            //Set the size and position of 3d object (easier to set in code vs in IB editor)
+            nodeModel.pivot = SCNMatrix4MakeTranslation(0.0, 0.0, 0.0)
+            nodeModel.scale = SCNVector3(0.0002, 0.0002, 0.0002)
+            
             // Add the model to the scene
             sceneView.scene.rootNode.addChildNode(newNode)
             nodePlaced = true
@@ -272,7 +280,6 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
         let node = PlaneDetectionNode()
         node.addChildNode(nodeModel)
         
-        //sceneView.scene.rootNode.addChildNode(node)
         self.planeNode = node
         
         
@@ -421,5 +428,14 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
         // Release any cached data, images, etc that aren't in use.
     }
 
+}
+
+   //----------------------------------------------- Extensions -----------------------------------------------//
+
+extension float4x4 {
+    var translation: float3 {
+        let translation = self.columns.3
+        return float3(translation.x, translation.y, translation.z)
+    }
 }
 

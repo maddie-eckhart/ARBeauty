@@ -12,8 +12,6 @@
 		8516879B20E2C1CE00F8A8E8 /* mac_fix_material.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8516879A20E2C1CE00F8A8E8 /* mac_fix_material.jpg */; };
 		8516879E20E2C6E200F8A8E8 /* mac_fix.scn in Resources */ = {isa = PBXBuildFile; fileRef = 8516879C20E2C1D800F8A8E8 /* mac_fix.scn */; };
 		8516879F20E2C6E500F8A8E8 /* urban.scn in Resources */ = {isa = PBXBuildFile; fileRef = 8516879D20E2C1E800F8A8E8 /* urban.scn */; };
-		C1476FC420F4037C007F8CCC /* salmon.png in Resources */ = {isa = PBXBuildFile; fileRef = C1476FC320F4037C007F8CCC /* salmon.png */; };
-		C1476FC620F4038D007F8CCC /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = C1476FC520F4038D007F8CCC /* green.png */; };
 		C149B40820EAB9B2007CF0AC /* side 2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C149B40120EAB9B0007CF0AC /* side 2.jpeg */; };
 		C149B40920EAB9B2007CF0AC /* perfume.scn in Resources */ = {isa = PBXBuildFile; fileRef = C149B40220EAB9B0007CF0AC /* perfume.scn */; };
 		C149B40A20EAB9B2007CF0AC /* top.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C149B40320EAB9B1007CF0AC /* top.jpeg */; };
@@ -30,7 +28,6 @@
 		C1A31B4520F7AD4B00AD8BCA /* lipstick.scn in Resources */ = {isa = PBXBuildFile; fileRef = C1A31B4420F7AD4B00AD8BCA /* lipstick.scn */; };
 		C1A31B4720F7AD5700AD8BCA /* wrap.png in Resources */ = {isa = PBXBuildFile; fileRef = C1A31B4620F7AD5700AD8BCA /* wrap.png */; };
 		C1A7559520F5088A00502DF5 /* MaterialCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A7559420F5088A00502DF5 /* MaterialCollectionViewCell.swift */; };
-		C1A7559720F51AE900502DF5 /* purple.png in Resources */ = {isa = PBXBuildFile; fileRef = C1A7559620F51AE900502DF5 /* purple.png */; };
 		C1F810ED20F53E1200510AE4 /* Niagara.png in Resources */ = {isa = PBXBuildFile; fileRef = C1F810D620F53E0F00510AE4 /* Niagara.png */; };
 		C1F810EE20F53E1200510AE4 /* Scarlett Empress.png in Resources */ = {isa = PBXBuildFile; fileRef = C1F810D720F53E0F00510AE4 /* Scarlett Empress.png */; };
 		C1F810EF20F53E1200510AE4 /* Tolede.png in Resources */ = {isa = PBXBuildFile; fileRef = C1F810D820F53E0F00510AE4 /* Tolede.png */; };
@@ -68,8 +65,6 @@
 		8516879A20E2C1CE00F8A8E8 /* mac_fix_material.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mac_fix_material.jpg; sourceTree = "<group>"; };
 		8516879C20E2C1D800F8A8E8 /* mac_fix.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = mac_fix.scn; sourceTree = "<group>"; };
 		8516879D20E2C1E800F8A8E8 /* urban.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = urban.scn; sourceTree = "<group>"; };
-		C1476FC320F4037C007F8CCC /* salmon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = salmon.png; sourceTree = "<group>"; };
-		C1476FC520F4038D007F8CCC /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = "<group>"; };
 		C149B40120EAB9B0007CF0AC /* side 2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "side 2.jpeg"; sourceTree = "<group>"; };
 		C149B40220EAB9B0007CF0AC /* perfume.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = perfume.scn; sourceTree = "<group>"; };
 		C149B40320EAB9B1007CF0AC /* top.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = top.jpeg; sourceTree = "<group>"; };
@@ -86,7 +81,6 @@
 		C1A31B4420F7AD4B00AD8BCA /* lipstick.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = lipstick.scn; sourceTree = "<group>"; };
 		C1A31B4620F7AD5700AD8BCA /* wrap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wrap.png; sourceTree = "<group>"; };
 		C1A7559420F5088A00502DF5 /* MaterialCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialCollectionViewCell.swift; sourceTree = "<group>"; };
-		C1A7559620F51AE900502DF5 /* purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = purple.png; path = "ARSceneKit/Resources/New Group/purple.png"; sourceTree = SOURCE_ROOT; };
 		C1F810D620F53E0F00510AE4 /* Niagara.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Niagara.png; sourceTree = "<group>"; };
 		C1F810D720F53E0F00510AE4 /* Scarlett Empress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Scarlett Empress.png"; sourceTree = "<group>"; };
 		C1F810D820F53E0F00510AE4 /* Tolede.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tolede.png; sourceTree = "<group>"; };
@@ -135,7 +129,6 @@
 			isa = PBXGroup;
 			children = (
 				C1A31B4820F7AE3D00AD8BCA /* NARS */,
-				C1476FBB20F3F01D007F8CCC /* Materials */,
 				C149B40020EAB9A8007CF0AC /* Perfume */,
 				8516879320E2C17A00F8A8E8 /* URBAN */,
 				8516878E20E2C0F600F8A8E8 /* MAC */,
@@ -170,17 +163,6 @@
 				E4231FDA1F0FEAD500CBE4C1 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
-			sourceTree = "<group>";
-		};
-		C1476FBB20F3F01D007F8CCC /* Materials */ = {
-			isa = PBXGroup;
-			children = (
-				C1476FC320F4037C007F8CCC /* salmon.png */,
-				C1A7559620F51AE900502DF5 /* purple.png */,
-				C1476FC520F4038D007F8CCC /* green.png */,
-			);
-			name = Materials;
-			path = Meterials;
 			sourceTree = "<group>";
 		};
 		C149B40020EAB9A8007CF0AC /* Perfume */ = {
@@ -334,11 +316,9 @@
 			files = (
 				E4231FDC1F0FEAD500CBE4C1 /* LaunchScreen.storyboard in Resources */,
 				C149B40920EAB9B2007CF0AC /* perfume.scn in Resources */,
-				C1A7559720F51AE900502DF5 /* purple.png in Resources */,
 				C1F810F920F53E1200510AE4 /* Heat Wave.png in Resources */,
 				C1F810F720F53E1200510AE4 /* Cruising.png in Resources */,
 				C149B40A20EAB9B2007CF0AC /* top.jpeg in Resources */,
-				C1476FC420F4037C007F8CCC /* salmon.png in Resources */,
 				C1F810F520F53E1200510AE4 /* Schiap.png in Resources */,
 				C1F810EE20F53E1200510AE4 /* Scarlett Empress.png in Resources */,
 				C1F810FF20F53E1200510AE4 /* Afghan Red.png in Resources */,
@@ -360,7 +340,6 @@
 				8516879E20E2C6E200F8A8E8 /* mac_fix.scn in Resources */,
 				C18B08DF20EECA56000F5679 /* mac_palette.scn in Resources */,
 				C149B40820EAB9B2007CF0AC /* side 2.jpeg in Resources */,
-				C1476FC620F4038D007F8CCC /* green.png in Resources */,
 				C1F810F020F53E1200510AE4 /* Fire Down Below.png in Resources */,
 				8516879F20E2C6E500F8A8E8 /* urban.scn in Resources */,
 				8516879B20E2C1CE00F8A8E8 /* mac_fix_material.jpg in Resources */,
