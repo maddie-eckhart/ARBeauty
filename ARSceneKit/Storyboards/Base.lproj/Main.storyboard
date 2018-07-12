@@ -32,15 +32,15 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="aSk-xj-wNQ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wLQ-jK-tAN">
-                                <rect key="frame" x="0.0" y="557" width="375" height="103"/>
-                                <color key="backgroundColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="0.54620612157534243" colorSpace="custom" customColorSpace="sRGB"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" indicatorStyle="white" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wLQ-jK-tAN">
+                                <rect key="frame" x="0.0" y="557" width="375" height="110"/>
+                                <color key="backgroundColor" red="0.99019607843137258" green="1" blue="1" alpha="0.54620612157534243" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="103" id="NXr-2q-rUx"/>
+                                    <constraint firstAttribute="height" constant="110" id="NXr-2q-rUx"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="J16-Hb-nwb">
                                     <size key="itemSize" width="80" height="80"/>
@@ -50,7 +50,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="uW5-kI-VO5" customClass="MaterialCollectionViewCell" customModule="ARSceneKit" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="11.5" width="80" height="80"/>
+                                        <rect key="frame" x="0.0" y="15" width="80" height="80"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -61,7 +61,7 @@
                                                 </imageView>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.97647058819999999" green="0.34509803919999998" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="a0U-3U-6ko" secondAttribute="bottom" id="5AE-dI-9aN"/>
                                             <constraint firstItem="a0U-3U-6ko" firstAttribute="leading" secondItem="uW5-kI-VO5" secondAttribute="leading" id="Vce-PE-uQs"/>
@@ -78,15 +78,23 @@
                                     <outlet property="delegate" destination="BV1-FR-VrT" id="guP-2x-Vvq"/>
                                 </connections>
                             </collectionView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTP-LR-WdW">
+                                <rect key="frame" x="169" y="519" width="39" height="30"/>
+                                <color key="backgroundColor" red="0.99019607843137258" green="1" blue="1" alpha="0.70267016267123283" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="N22-6A-bqf" firstAttribute="top" secondItem="lcz-1U-o7Y" secondAttribute="top" id="Ceh-G0-oYW"/>
                             <constraint firstItem="wLQ-jK-tAN" firstAttribute="trailing" secondItem="xHK-NE-3Db" secondAttribute="trailing" id="DEx-Jx-gLV"/>
                             <constraint firstItem="wLQ-jK-tAN" firstAttribute="leading" secondItem="xHK-NE-3Db" secondAttribute="leading" id="JdI-SK-ZQn"/>
+                            <constraint firstItem="dTP-LR-WdW" firstAttribute="centerX" secondItem="lcz-1U-o7Y" secondAttribute="centerX" constant="1" id="Lut-rr-Kdr"/>
                             <constraint firstItem="wLQ-jK-tAN" firstAttribute="leading" secondItem="lcz-1U-o7Y" secondAttribute="leading" id="Rn3-bu-qKU"/>
                             <constraint firstItem="wLQ-jK-tAN" firstAttribute="trailing" secondItem="N22-6A-bqf" secondAttribute="trailing" id="Scf-pp-LE5"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="wLQ-jK-tAN" secondAttribute="bottom" constant="7" id="cK1-iE-gGI"/>
+                            <constraint firstItem="wLQ-jK-tAN" firstAttribute="top" secondItem="dTP-LR-WdW" secondAttribute="bottom" constant="8" id="a7a-Sq-beb"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="wLQ-jK-tAN" secondAttribute="bottom" id="cK1-iE-gGI"/>
                             <constraint firstItem="xHK-NE-3Db" firstAttribute="top" secondItem="gKk-6m-LAK" secondAttribute="top" constant="256" id="evc-pH-FBz"/>
                             <constraint firstItem="wLQ-jK-tAN" firstAttribute="leading" secondItem="N22-6A-bqf" secondAttribute="leading" id="fcJ-te-aEZ"/>
                             <constraint firstAttribute="trailing" secondItem="wLQ-jK-tAN" secondAttribute="trailing" id="pC2-Ns-cRO"/>
@@ -94,16 +102,26 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gKk-6m-LAK"/>
                     </view>
-                    <navigationItem key="navigationItem" id="evg-fP-1ad"/>
+                    <navigationItem key="navigationItem" id="evg-fP-1ad">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Add to Cart" id="5ZL-Ud-pN5">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </barButtonItem>
+                            <barButtonItem title="NARS Lipstick    " id="Hz1-Ur-6Ju">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="wLQ-jK-tAN" id="NsP-lZ-o2E"/>
+                        <outlet property="colorLabel" destination="dTP-LR-WdW" id="cXP-jx-B7w"/>
                         <outlet property="sceneView" destination="N22-6A-bqf" id="Qie-VX-RRf"/>
                         <outlet property="searchingLabel" destination="xHK-NE-3Db" id="0QO-BF-J0k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1894" y="787"/>
+            <point key="canvasLocation" x="1893.5999999999999" y="786.65667166416802"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="K9m-Dj-hcm">
@@ -146,10 +164,11 @@
                                 <rect key="frame" x="0.0" y="406" width="375" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.15216473235864181" green="0.9715422688277473" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <state key="normal" title="Launch AR "/>
                                 <connections>
                                     <action selector="launchAR:" destination="kTq-VE-u5x" eventType="touchUpInside" id="ho9-J1-jOP"/>
-                                    <segue destination="BV1-FR-VrT" kind="push" id="ibI-In-VEG"/>
+                                    <segue destination="BV1-FR-VrT" kind="show" identifier="toAR" id="ibI-In-VEG"/>
                                 </connections>
                             </button>
                         </subviews>

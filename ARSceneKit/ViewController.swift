@@ -16,7 +16,8 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
     @IBOutlet var sceneView: ARSCNView!
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet weak var searchingLabel: UILabel!
-
+    @IBOutlet weak var colorLabel: UILabel!
+    
     //----------------------------------------------- Node and Scene Setup -----------------------------------------------//
     
     private var nodeModel:SCNNode?
@@ -87,11 +88,12 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
         } else {
             print("Sorry, your device doesn't support ARKit")
         }
+        colorLabel.isHidden = true
     }
     
    //----------------------------------------------- Product Collection View -----------------------------------------------//
 
-    var materials: [UIImage] = []
+    var materials: [MaterialDetails] = []
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
 
@@ -108,7 +110,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! MaterialCollectionViewCell
-        let image:UIImage = materials[indexPath.row]
+        let image:UIImage = materials[indexPath.row].image
         cell.imageView.image = image
         cell.layer.cornerRadius = cell.imageView.frame.size.width / 2
         return cell
@@ -122,9 +124,13 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
         cell?.layer.borderWidth = 3.0
         cell?.layer.borderColor = UIColor.white.cgColor
         
-        let image = materials[indexPath.row]
+        let image = materials[indexPath.row].image
         nodeModel?.geometry?.firstMaterial?.diffuse.contents = image
-
+        
+        let label = materials[indexPath.row].desc
+        colorLabel.isHidden = false
+        colorLabel.layer.cornerRadius = 5
+        colorLabel.text = label
     }
 
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
@@ -274,6 +280,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
    //----------------------------------------------- Auxillary Functions -----------------------------------------------//
     
     func launchAlert() {
+        
         let alertController = UIAlertController(title: "Floor Detected!", message: "Tap on screen to place product", preferredStyle: .alert)
         let alertText = UIAlertAction(title: "OK", style: .cancel)
         alertController.addAction(alertText)
@@ -281,29 +288,57 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
     }
     
     func setMaterials() {
-        materials.append(UIImage(named: "Afghan Red")!)
-        materials.append(UIImage(named: "Banned Red")!)
-        materials.append(UIImage(named: "Belle Du Jour")!)
-        materials.append(UIImage(named: "Catfight")!)
-        materials.append(UIImage(named: "Cruising")!)
-        materials.append(UIImage(named: "Damage")!)
-        materials.append(UIImage(named: "Dolce Vita")!)
-        materials.append(UIImage(named: "Falbala")!)
-        materials.append(UIImage(named: "Fast Ride")!)
-        materials.append(UIImage(named: "Fire Down Below")!)
-        materials.append(UIImage(named: "Funny Face")!)
-        materials.append(UIImage(named: "Gipsy")!)
-        materials.append(UIImage(named: "Heat Wave")!)
-        materials.append(UIImage(named: "Niagara")!)
-        materials.append(UIImage(named: "Pigalle")!)
-        materials.append(UIImage(named: "Red Lizard")!)
-        materials.append(UIImage(named: "Roman Holiday")!)
-        materials.append(UIImage(named: "Rosecliff")!)
-        materials.append(UIImage(named: "Scarlett Empress")!)
-        materials.append(UIImage(named: "Schiap")!)
-        materials.append(UIImage(named: "Sexual Healing")!)
-        materials.append(UIImage(named: "Shrinagar")!)
-        materials.append(UIImage(named: "Tolede")!)
+        
+        // add color images with details
+        let color1 = MaterialDetails(newImage: UIImage(named: "Afghan Red")!, description: " Afghan Red (garnet –satin finish) ")
+        let color2 = MaterialDetails(newImage: UIImage(named: "Banned Red")!, description: " Banned Red (mulled wine –satin finish) ")
+        let color3 = MaterialDetails(newImage: UIImage(named: "Belle Du Jour")!, description: " Belle Du Jour (nude beige –sheer finish) ")
+        let color4 = MaterialDetails(newImage: UIImage(named: "Catfight")!, description: " Catfight (nude mauve –semi nude finish) ")
+        let color5 = MaterialDetails(newImage: UIImage(named: "Cruising")!, description: " Cruising (nude pink –sheer finish) ")
+        let color6 = MaterialDetails(newImage: UIImage(named: "Damage")!, description: " Damage (muted grape –sheer finish) ")
+        let color7 = MaterialDetails(newImage: UIImage(named: "Dolce Vita")!, description: " Dolce Vita (dusty rose –sheer finish) ")
+        let color8 = MaterialDetails(newImage: UIImage(named: "Falbala")!, description: " Falbala (shimmering rose –sheer finish) ")
+        let color9 = MaterialDetails(newImage: UIImage(named: "Fast Ride")!, description: " Fast Ride (mulberry –sheer finish) ")
+        let color10 = MaterialDetails(newImage: UIImage(named: "Fire Down Below")!, description: " Fire Down Below (blood red –semi matte finish) ")
+        let color11 = MaterialDetails(newImage: UIImage(named: "Funny Face")!, description: " Funny Face (bright fuchsia –semi matte finish) ")
+        let color12 = MaterialDetails(newImage: UIImage(named: "Gipsy")!, description: " Gipsy (warm berry –sheer finish) ")
+        let color13 = MaterialDetails(newImage: UIImage(named: "Heat Wave")!, description: " Heat Wave (orange red –matte finish) ")
+        let color14 = MaterialDetails(newImage: UIImage(named: "Niagara")!, description: " Niagara (pinkish –satin finish) ")
+        let color15 = MaterialDetails(newImage: UIImage(named: "Pigalle")!, description: " Pigalle (pink chocolate –semi matte finish) ")
+        let color16 = MaterialDetails(newImage: UIImage(named: "Red Lizard")!, description: " Red Lizard (full-powered red –semi matte finish) ")
+        let color17 = MaterialDetails(newImage: UIImage(named: "Roman Holiday")!, description: " Roman Holiday (delicate pastel pink –sheer finish) ")
+        let color18 = MaterialDetails(newImage: UIImage(named: "Rosecliff")!, description: " Rosecliff (soft rose –satin finish) ")
+        let color19 = MaterialDetails(newImage: UIImage(named: "Scarlett Empress")!, description: " Scarlett Empress (rich blue-red –semi matte finish) ")
+        let color20 = MaterialDetails(newImage: UIImage(named: "Schiap")!, description: " Schiap (shocking pink –semi matte finish) ")
+        let color21 = MaterialDetails(newImage: UIImage(named: "Sexual Healing")!, description: " Sexual Healing (metallic peachy rose –satin finish) ")
+        let color22 = MaterialDetails(newImage: UIImage(named: "Shrinagar")!, description: " Shrinagar (metallic raspberry –sheer finish) ")
+        let color23 = MaterialDetails(newImage: UIImage(named: "Tolede")!, description: " Tolede (pink rose –satin finish) ")
+        
+        // add colors to array
+        materials.append(color1)
+        materials.append(color2)
+        materials.append(color3)
+        materials.append(color4)
+        materials.append(color5)
+        materials.append(color6)
+        materials.append(color7)
+        materials.append(color8)
+        materials.append(color9)
+        materials.append(color10)
+        materials.append(color11)
+        materials.append(color12)
+        materials.append(color13)
+        materials.append(color14)
+        materials.append(color15)
+        materials.append(color16)
+        materials.append(color17)
+        materials.append(color18)
+        materials.append(color19)
+        materials.append(color20)
+        materials.append(color21)
+        materials.append(color22)
+        materials.append(color23)
+        
     }
     
    //----------------------------------------------- View After Loading -----------------------------------------------//

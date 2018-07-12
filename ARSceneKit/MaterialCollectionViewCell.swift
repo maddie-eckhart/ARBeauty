@@ -12,5 +12,4 @@ import UIKit
 class MaterialCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imageView: UIImageView!
-    
 }
