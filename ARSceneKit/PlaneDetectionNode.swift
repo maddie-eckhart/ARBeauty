@@ -3,7 +3,7 @@
 //  ARSceneKit
 //
 //  Created by Madeline Eckhart on 7/3/18.
-//  Copyright © 2018 Esteban Herrera. All rights reserved.
+//  Copyright © 2018 MaddGaming. All rights reserved.
 //
 
 import Foundation

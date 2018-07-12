@@ -15,8 +15,8 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
 
     @IBOutlet var sceneView: ARSCNView!
     @IBOutlet var collectionView: UICollectionView!
-    @IBOutlet weak var searchingLabel: UILabel!
     @IBOutlet weak var colorLabel: UILabel!
+    @IBOutlet weak var spinnerView: UIView!
     
     //----------------------------------------------- Node and Scene Setup -----------------------------------------------//
     
@@ -245,9 +245,10 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
         // Hide searching label
         DispatchQueue.main.async {
             UIView.animate(withDuration: 0.5, animations: {
-                self.searchingLabel.alpha = 0.0
+                self.spinnerView.layer.cornerRadius = 12
+                self.spinnerView.alpha = 0.0
             }, completion: { _ in
-                self.searchingLabel.isHidden = true
+                self.spinnerView.isHidden = true
                 
             })
             self.launchAlert()
@@ -278,6 +279,14 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UI
     }
 
    //----------------------------------------------- Auxillary Functions -----------------------------------------------//
+    
+    @IBAction func addToCart(_ sender: Any) {
+        
+        let alertController = UIAlertController(title: nil, message: "Added to Bag", preferredStyle: .alert)
+        let alertText = UIAlertAction(title: "OK", style: .cancel)
+        alertController.addAction(alertText)
+        present(alertController, animated: true, completion: nil)
+    }
     
     func launchAlert() {
         

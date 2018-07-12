@@ -26,16 +26,6 @@
                                     <outlet property="delegate" destination="BV1-FR-VrT" id="uoM-1n-jEE"/>
                                 </connections>
                             </arscnView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Searching for the floor..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xHK-NE-3Db">
-                                <rect key="frame" x="0.0" y="320" width="375" height="46"/>
-                                <color key="backgroundColor" red="0.54608848222016082" green="0.54608848222016082" blue="0.54608848222016082" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="aSk-xj-wNQ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" indicatorStyle="white" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wLQ-jK-tAN">
                                 <rect key="frame" x="0.0" y="557" width="375" height="110"/>
                                 <color key="backgroundColor" red="0.99019607843137258" green="1" blue="1" alpha="0.54620612157534243" colorSpace="custom" customColorSpace="sRGB"/>
@@ -84,18 +74,49 @@
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Owy-gZ-kYW">
+                                <rect key="frame" x="68" y="269" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zWO-Wq-1Uh" userLabel="Spinner View">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Searching for the floor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HXr-gB-Evb">
+                                                <rect key="frame" x="0.0" y="16" width="240" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="akL-e8-zOB" customClass="SpinnerView" customModule="ARSceneKit" customModuleProvider="target">
+                                                <rect key="frame" x="95" y="56" width="50" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="HXr-gB-Evb" firstAttribute="leading" secondItem="zWO-Wq-1Uh" secondAttribute="leading" id="3D4-9a-KI8"/>
+                                            <constraint firstAttribute="width" constant="240" id="3Nd-k5-NXF"/>
+                                            <constraint firstAttribute="trailing" secondItem="akL-e8-zOB" secondAttribute="trailing" constant="95" id="Jag-aV-8mt"/>
+                                            <constraint firstItem="akL-e8-zOB" firstAttribute="top" secondItem="HXr-gB-Evb" secondAttribute="bottom" constant="19" id="YNW-ic-e3V"/>
+                                            <constraint firstItem="akL-e8-zOB" firstAttribute="top" secondItem="HXr-gB-Evb" secondAttribute="bottom" constant="19" id="Yhl-Ur-wde"/>
+                                            <constraint firstAttribute="trailing" secondItem="HXr-gB-Evb" secondAttribute="trailing" id="bS8-90-gjY"/>
+                                            <constraint firstAttribute="height" constant="128" id="mBy-ZC-aOU"/>
+                                            <constraint firstItem="akL-e8-zOB" firstAttribute="leading" secondItem="zWO-Wq-1Uh" secondAttribute="leading" constant="95" id="sXX-ed-tiI"/>
+                                            <constraint firstItem="HXr-gB-Evb" firstAttribute="top" secondItem="zWO-Wq-1Uh" secondAttribute="top" constant="16" id="wKq-pa-h6e"/>
+                                            <constraint firstAttribute="bottom" secondItem="akL-e8-zOB" secondAttribute="bottom" constant="22" id="y0D-xg-5ga"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="N22-6A-bqf" firstAttribute="top" secondItem="lcz-1U-o7Y" secondAttribute="top" id="Ceh-G0-oYW"/>
-                            <constraint firstItem="wLQ-jK-tAN" firstAttribute="trailing" secondItem="xHK-NE-3Db" secondAttribute="trailing" id="DEx-Jx-gLV"/>
-                            <constraint firstItem="wLQ-jK-tAN" firstAttribute="leading" secondItem="xHK-NE-3Db" secondAttribute="leading" id="JdI-SK-ZQn"/>
                             <constraint firstItem="dTP-LR-WdW" firstAttribute="centerX" secondItem="lcz-1U-o7Y" secondAttribute="centerX" constant="1" id="Lut-rr-Kdr"/>
                             <constraint firstItem="wLQ-jK-tAN" firstAttribute="leading" secondItem="lcz-1U-o7Y" secondAttribute="leading" id="Rn3-bu-qKU"/>
                             <constraint firstItem="wLQ-jK-tAN" firstAttribute="trailing" secondItem="N22-6A-bqf" secondAttribute="trailing" id="Scf-pp-LE5"/>
                             <constraint firstItem="wLQ-jK-tAN" firstAttribute="top" secondItem="dTP-LR-WdW" secondAttribute="bottom" constant="8" id="a7a-Sq-beb"/>
                             <constraint firstAttribute="bottomMargin" secondItem="wLQ-jK-tAN" secondAttribute="bottom" id="cK1-iE-gGI"/>
-                            <constraint firstItem="xHK-NE-3Db" firstAttribute="top" secondItem="gKk-6m-LAK" secondAttribute="top" constant="256" id="evc-pH-FBz"/>
                             <constraint firstItem="wLQ-jK-tAN" firstAttribute="leading" secondItem="N22-6A-bqf" secondAttribute="leading" id="fcJ-te-aEZ"/>
                             <constraint firstAttribute="trailing" secondItem="wLQ-jK-tAN" secondAttribute="trailing" id="pC2-Ns-cRO"/>
                             <constraint firstAttribute="bottom" secondItem="N22-6A-bqf" secondAttribute="bottom" id="rvk-ew-mXF"/>
@@ -106,6 +127,9 @@
                         <rightBarButtonItems>
                             <barButtonItem title="Add to Cart" id="5ZL-Ud-pN5">
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="addToCart:" destination="BV1-FR-VrT" id="2Kq-GO-eZH"/>
+                                </connections>
                             </barButtonItem>
                             <barButtonItem title="NARS Lipstick    " id="Hz1-Ur-6Ju">
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -116,7 +140,7 @@
                         <outlet property="collectionView" destination="wLQ-jK-tAN" id="NsP-lZ-o2E"/>
                         <outlet property="colorLabel" destination="dTP-LR-WdW" id="cXP-jx-B7w"/>
                         <outlet property="sceneView" destination="N22-6A-bqf" id="Qie-VX-RRf"/>
-                        <outlet property="searchingLabel" destination="xHK-NE-3Db" id="0QO-BF-J0k"/>
+                        <outlet property="spinnerView" destination="zWO-Wq-1Uh" id="F1U-WM-Z0i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>

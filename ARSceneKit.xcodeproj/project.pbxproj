@@ -26,6 +26,7 @@
 		C18B08DB20EEC4C3000F5679 /* reflective.png in Resources */ = {isa = PBXBuildFile; fileRef = C18B08DA20EEC4C2000F5679 /* reflective.png */; };
 		C18B08DD20EEC655000F5679 /* reflective.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C18B08DC20EEC655000F5679 /* reflective.jpg */; };
 		C18B08DF20EECA56000F5679 /* mac_palette.scn in Resources */ = {isa = PBXBuildFile; fileRef = C18B08DE20EECA56000F5679 /* mac_palette.scn */; };
+		C1A31B4320F7956C00AD8BCA /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A31B4220F7956C00AD8BCA /* SpinnerView.swift */; };
 		C1A7559520F5088A00502DF5 /* MaterialCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A7559420F5088A00502DF5 /* MaterialCollectionViewCell.swift */; };
 		C1A7559720F51AE900502DF5 /* purple.png in Resources */ = {isa = PBXBuildFile; fileRef = C1A7559620F51AE900502DF5 /* purple.png */; };
 		C1F810ED20F53E1200510AE4 /* Niagara.png in Resources */ = {isa = PBXBuildFile; fileRef = C1F810D620F53E0F00510AE4 /* Niagara.png */; };
@@ -79,6 +80,7 @@
 		C18B08DA20EEC4C2000F5679 /* reflective.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reflective.png; sourceTree = "<group>"; };
 		C18B08DC20EEC655000F5679 /* reflective.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = reflective.jpg; sourceTree = "<group>"; };
 		C18B08DE20EECA56000F5679 /* mac_palette.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = mac_palette.scn; sourceTree = "<group>"; };
+		C1A31B4220F7956C00AD8BCA /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
 		C1A7559420F5088A00502DF5 /* MaterialCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialCollectionViewCell.swift; sourceTree = "<group>"; };
 		C1A7559620F51AE900502DF5 /* purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = purple.png; path = "ARSceneKit/Resources/New Group/purple.png"; sourceTree = SOURCE_ROOT; };
 		C1F810D620F53E0F00510AE4 /* Niagara.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Niagara.png; sourceTree = "<group>"; };
@@ -246,8 +248,9 @@
 				C17F4B8F20EA82B700492C3E /* MaterialDetails.swift */,
 				C1A7559420F5088A00502DF5 /* MaterialCollectionViewCell.swift */,
 				C149B40F20EBCF76007CF0AC /* PlaneDetectionNode.swift */,
-				E4231FD31F0FEAD500CBE4C1 /* ViewController.swift */,
 				C1F8110420F5632E00510AE4 /* PDPViewController.swift */,
+				C1A31B4220F7956C00AD8BCA /* SpinnerView.swift */,
+				E4231FD31F0FEAD500CBE4C1 /* ViewController.swift */,
 				8516878D20E2C0E000F8A8E8 /* Resources */,
 				85CA642520E284360059B0F1 /* Storyboards */,
 				E4231FD81F0FEAD500CBE4C1 /* Assets.xcassets */,
@@ -375,6 +378,7 @@
 				C149B41020EBCF76007CF0AC /* PlaneDetectionNode.swift in Sources */,
 				C1A7559520F5088A00502DF5 /* MaterialCollectionViewCell.swift in Sources */,
 				E4231FD01F0FEAD500CBE4C1 /* AppDelegate.swift in Sources */,
+				C1A31B4320F7956C00AD8BCA /* SpinnerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
