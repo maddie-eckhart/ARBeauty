@@ -12,9 +12,11 @@ import UIKit
 class MaterialDetails {
     var image: UIImage
     var desc: String = ""
+    var hex: String = ""
     
-    init(newImage: UIImage, description: String ) {
+    init(newImage: UIImage, hexValue: String, description: String ) {
         self.desc = description
+        self.hex = hexValue
         self.image = newImage
     }
 }

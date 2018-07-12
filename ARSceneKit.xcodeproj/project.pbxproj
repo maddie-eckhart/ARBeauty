@@ -27,6 +27,8 @@
 		C18B08DD20EEC655000F5679 /* reflective.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C18B08DC20EEC655000F5679 /* reflective.jpg */; };
 		C18B08DF20EECA56000F5679 /* mac_palette.scn in Resources */ = {isa = PBXBuildFile; fileRef = C18B08DE20EECA56000F5679 /* mac_palette.scn */; };
 		C1A31B4320F7956C00AD8BCA /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A31B4220F7956C00AD8BCA /* SpinnerView.swift */; };
+		C1A31B4520F7AD4B00AD8BCA /* lipstick.scn in Resources */ = {isa = PBXBuildFile; fileRef = C1A31B4420F7AD4B00AD8BCA /* lipstick.scn */; };
+		C1A31B4720F7AD5700AD8BCA /* wrap.png in Resources */ = {isa = PBXBuildFile; fileRef = C1A31B4620F7AD5700AD8BCA /* wrap.png */; };
 		C1A7559520F5088A00502DF5 /* MaterialCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A7559420F5088A00502DF5 /* MaterialCollectionViewCell.swift */; };
 		C1A7559720F51AE900502DF5 /* purple.png in Resources */ = {isa = PBXBuildFile; fileRef = C1A7559620F51AE900502DF5 /* purple.png */; };
 		C1F810ED20F53E1200510AE4 /* Niagara.png in Resources */ = {isa = PBXBuildFile; fileRef = C1F810D620F53E0F00510AE4 /* Niagara.png */; };
@@ -81,6 +83,8 @@
 		C18B08DC20EEC655000F5679 /* reflective.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = reflective.jpg; sourceTree = "<group>"; };
 		C18B08DE20EECA56000F5679 /* mac_palette.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = mac_palette.scn; sourceTree = "<group>"; };
 		C1A31B4220F7956C00AD8BCA /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
+		C1A31B4420F7AD4B00AD8BCA /* lipstick.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = lipstick.scn; sourceTree = "<group>"; };
+		C1A31B4620F7AD5700AD8BCA /* wrap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wrap.png; sourceTree = "<group>"; };
 		C1A7559420F5088A00502DF5 /* MaterialCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialCollectionViewCell.swift; sourceTree = "<group>"; };
 		C1A7559620F51AE900502DF5 /* purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = purple.png; path = "ARSceneKit/Resources/New Group/purple.png"; sourceTree = SOURCE_ROOT; };
 		C1F810D620F53E0F00510AE4 /* Niagara.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Niagara.png; sourceTree = "<group>"; };
@@ -130,7 +134,7 @@
 		8516878D20E2C0E000F8A8E8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C1F810D520F53AB900510AE4 /* NARS Colors */,
+				C1A31B4820F7AE3D00AD8BCA /* NARS */,
 				C1476FBB20F3F01D007F8CCC /* Materials */,
 				C149B40020EAB9A8007CF0AC /* Perfume */,
 				8516879320E2C17A00F8A8E8 /* URBAN */,
@@ -193,6 +197,16 @@
 				C149B40320EAB9B1007CF0AC /* top.jpeg */,
 			);
 			path = Perfume;
+			sourceTree = "<group>";
+		};
+		C1A31B4820F7AE3D00AD8BCA /* NARS */ = {
+			isa = PBXGroup;
+			children = (
+				C1A31B4420F7AD4B00AD8BCA /* lipstick.scn */,
+				C1A31B4620F7AD5700AD8BCA /* wrap.png */,
+				C1F810D520F53AB900510AE4 /* NARS Colors */,
+			);
+			path = NARS;
 			sourceTree = "<group>";
 		};
 		C1F810D520F53AB900510AE4 /* NARS Colors */ = {
@@ -341,6 +355,7 @@
 				8516879720E2C19D00F8A8E8 /* urban_material.jpg in Resources */,
 				C1F810F420F53E1200510AE4 /* Shrinagar.png in Resources */,
 				8516879220E2C10400F8A8E8 /* mac_palette_material.jpg in Resources */,
+				C1A31B4720F7AD5700AD8BCA /* wrap.png in Resources */,
 				C1F810F820F53E1200510AE4 /* Catfight.png in Resources */,
 				8516879E20E2C6E200F8A8E8 /* mac_fix.scn in Resources */,
 				C18B08DF20EECA56000F5679 /* mac_palette.scn in Resources */,
@@ -362,6 +377,7 @@
 				C1F8110220F53E1200510AE4 /* Funny Face.png in Resources */,
 				C1F810FC20F53E1200510AE4 /* Roman Holiday.png in Resources */,
 				C1F810ED20F53E1200510AE4 /* Niagara.png in Resources */,
+				C1A31B4520F7AD4B00AD8BCA /* lipstick.scn in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
