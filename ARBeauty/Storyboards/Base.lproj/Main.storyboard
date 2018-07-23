@@ -239,7 +239,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQb-51-TTP">
-                                <rect key="frame" x="0.0" y="528" width="375" height="30"/>
+                                <rect key="frame" x="0.0" y="536" width="375" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.60227864580000001" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="clF-LT-6DZ"/>
@@ -256,7 +256,7 @@
                             <constraint firstAttribute="bottom" secondItem="jI8-gS-dO0" secondAttribute="bottom" id="3wb-AZ-jLX"/>
                             <constraint firstItem="DQb-51-TTP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7P4-cY-1m4"/>
                             <constraint firstItem="cuQ-aj-b5r" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="49" id="CDt-jb-UF9"/>
-                            <constraint firstItem="9QS-w4-03n" firstAttribute="top" secondItem="DQb-51-TTP" secondAttribute="bottom" constant="8" id="Gad-cl-FO1"/>
+                            <constraint firstItem="9QS-w4-03n" firstAttribute="top" secondItem="DQb-51-TTP" secondAttribute="bottom" id="Gad-cl-FO1"/>
                             <constraint firstAttribute="trailing" secondItem="jI8-gS-dO0" secondAttribute="trailing" id="HJF-UU-dvq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3m7-1D-WiM" secondAttribute="trailing" id="PlR-qW-HZz"/>
                             <constraint firstItem="jI8-gS-dO0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Spv-M6-qle"/>

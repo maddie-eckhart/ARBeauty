@@ -178,7 +178,17 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     // MARK: UICollectionViewDelegate
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-
+        
+        // cell highlight when selected
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.layer.borderWidth = 3.0
+        cell?.layer.borderColor = UIColor.white.cgColor
+        
+//        var newFrame: CGRect = (cell?.frame)!
+//        newFrame.size = CGSize(width: (cell?.intrinsicContentSize.height)!*2, height: (cell?.intrinsicContentSize.width)!*2)
+//        cell?.frame = newFrame
+        
+        
         let shade = materials[indexPath.row]
         colorLabel.layer.cornerRadius = 5
         colorLabel.text = shade.desc
@@ -193,6 +203,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         lipstick_bullet.animationPlayer(forKey: "ID12")?.play()
     }
     
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        
+        // cell un-highlight when selected
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.layer.borderWidth = 0.0
+    }
     
     
     
@@ -310,7 +326,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     
     
-    //----------------------------------------- Utilz -----------------------------------------//
+    //----------------------------------------- Auxilary Functions -----------------------------------------//
 
     func initAlertView() {
         alertView.isHidden = true
