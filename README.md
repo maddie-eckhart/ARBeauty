@@ -1,7 +1,7 @@
-# AR-Demo
+# AR Beauty
 # An AR Beauty Experience
 
-An example of how augmented reality will impact the online shopping community, especially in the beauty industry.
+An example of how augmented reality can impact the online shopping community, especially the beauty industry.
 
 ## Demo Mode
 
